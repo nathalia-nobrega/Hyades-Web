@@ -74,27 +74,27 @@ h6 {
 }
 
 h1 {
-    font-size: 24px
+    font-size: 2em;
 }
 
 h2 {
-    font-size: 22px
+    font-size: 1.5em;
 }
 
 h3 {
-    font-size: 18px
+    font-size: 1.17em;
 }
 
 h4 {
-    font-size: 16px
+    font-size: 1em;
 }
 
 h5 {
-    font-size: 14px
+    font-size: 0.83em;
 }
 
 h6 {
-    font-size: 13px
+    font-size: 0.67em
 }
 
 *,
@@ -264,7 +264,7 @@ button {
     background:  url(../images/s.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: 90px;
+    padding-bottom: 50px;
 }
 
 .banner_taital {
@@ -734,6 +734,14 @@ input.email_text::placeholder {
     float: left;
     padding-bottom: 90px;
 }
+.quem-somos-heading {
+    font-size: 2em;
+    color: black; 
+}
+
+.quem-somos-heading + p {
+    font-size: 1.2em;
+}
 
 .number_text {
     width: 72px;
@@ -747,24 +755,6 @@ input.email_text::placeholder {
     margin-top: 100px;
 }
 
-.Cooming_soon_taital {
-    width: 100%;
-    float: left;
-    font-size: 50px;
-    color: #141414;
-    padding-top: 15px;
-    text-transform: uppercase;
-}
-
-.Cooming_soon_taital:after {
-    content: '';
-    position: absolute;
-    border: 2px solid #464646;
-    left: initial;
-    right: -20px;
-    width: 150px;
-    top: 50px;
-}
 
 .long_text_1 {
     width: 100%;
