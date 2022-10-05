@@ -747,6 +747,16 @@ input.email_text::placeholder {
     font-size: 1.2em;
 }
 
+.member-name {
+    font-size: 1.5em;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.member-description {
+    text-align: center;
+}
+
 .number_text {
     width: 72px;
     float: left;
