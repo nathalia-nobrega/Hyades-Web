@@ -251,6 +251,10 @@ button {
     padding-left: 15px;
 }
 
+.padding_left_15:hover {
+    color: #DAA21B;
+}
+
 .search_icon {
     font-size: 18px;
     color: #000;
@@ -295,7 +299,7 @@ button {
     float: left;
     font-size: 18px;
     color: #ffffff;
-    background-color: #df9911;
+    background-color: #A4ABBD;
     text-align: center;
     padding: 7px 0px;
     border-radius: 40px;
@@ -504,8 +508,8 @@ button {
 }
 
 .movies_menu li a:hover {
-    color: #d89616;
-    border-bottom: 5px solid #d89616;
+    color: #F9F871;
+    border-bottom: 5px solid #F9F871;
     z-index: 2;
     position: relative;
 }
@@ -526,8 +530,8 @@ button {
 }
 
 .movies_menu li.active a {
-    color: #d89616;
-    border-bottom: 5px solid #d89616;
+    color: #DAA21B;
+    border-bottom: 5px solid #DAA21B;
     z-index: 2;
     position: relative;
 }
