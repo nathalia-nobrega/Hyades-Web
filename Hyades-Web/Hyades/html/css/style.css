@@ -294,7 +294,7 @@ button {
     padding-top: 30px;
 }
 
-.see_bt a {
+.see_bt a{
     width: 100%;
     float: left;
     font-size: 18px;
@@ -308,6 +308,7 @@ button {
 .see_bt a:hover {
     color: #000;
     background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .play_icon {
@@ -349,10 +350,6 @@ button {
     float: left;
     padding-bottom: 90px;
     margin-bottom: 5px;
-}
-
-#objetivo_section {
-   background: #f5f1f1;
 }
 
 .image_1 {
@@ -404,6 +401,35 @@ button {
     text-transform: uppercase;
 }
 
+#sobre_section > .container-fluid > .row {
+    margin: 50px;
+}
+
+.title_sobre {
+    font-size: 2.1em;
+    font-weight: bold;
+}
+
+.subtitle_sobre {
+    font-size: 1.3em;
+    color: rgba(0, 0, 0, 0.415);
+}
+
+.description_sobre {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.sobre-img {
+    transition: transform 1.3s ease;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.sobre-img:hover {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transform: scale(1.1);
+}
 
 
 .movie_main {
@@ -652,7 +678,7 @@ button {
     text-align: center;
 }
 
-.seebt_1 a {
+.seebt_1 a{
     width: 170px;
     float: right;
     font-size: 18px;
@@ -733,29 +759,59 @@ input.email_text::placeholder {
     padding: 10px 10px;
 }
 
-.cooming_section {
-    width: 100%;
-    float: left;
-    padding-bottom: 90px;
+.people {
+    cursor: pointer;
 }
-.quem-somos-heading {
-    font-size: 2em;
-    color: black; 
-}
-
-.quem-somos-heading + p {
-    font-size: 1.2em;
+.item .box {
+    text-align:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.member-name {
-    font-size: 1.5em;
-    padding-top: 5px;
-    font-weight: bold;
+.item .cover {
+    width:100%;
+    height:100%;
+    background-color:#2b3b558a;
+    transition:opacity 0.15s ease-in;
+    opacity:0;
+    padding-top:80px;
+    padding-bottom: 15px;
+    color:#fff;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.15);
 }
+.item:hover .cover {
+    opacity:1;
 
-.member-description {
-    text-align: center;
-}
+  }
+  
+  .item .name_member {
+    color: white;
+    font-weight:bold;
+    margin-bottom:8px;
+  }
+  
+  .item .title_member {
+    text-transform:uppercase;
+    font-weight:bold;
+    color:#bbd8fb;
+    letter-spacing:2px;
+    font-size:13px;
+    margin-bottom:20px;
+  }
+  
+  .social a {
+    color:inherit;
+    margin:0 10px;
+    display:inline-block;
+    opacity:0.7;
+  }
+  .social a:hover {
+    opacity:1;
+  }
+
 
 .number_text {
     width: 72px;

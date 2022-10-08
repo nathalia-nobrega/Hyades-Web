@@ -76,6 +76,10 @@
     .header-search {
         padding: 15px 0px;
     }
+    .title_sobre, .subtitle_sobre, .description_sobre {
+        text-align: center;
+        margin-top: 6px;
+    }
     #collapseFilter.d-md-block {
         padding: 30px 0px;
     }
@@ -124,6 +128,11 @@
     }
     .mean-container .mean-nav ul li a.mean-expand {
         top: 0;
+    }
+
+    .title_sobre, .subtitle_sobre, .description_sobre {
+        text-align: center;
+        margin-top: 6px;
     }
 }
 
@@ -254,7 +263,8 @@
         display: none;
     }
     .banner_section {
-        background: #3c0e0e;
+        background-image: url(../images/pursuit-of-happiness.jpg);    background-size: 100%;
+        background-repeat: no-repeat;
     }
     .banner_taital {
         width: 75%;
@@ -264,6 +274,7 @@
     .banner_text {
         width: 100%;
     }
+    
     .play_icon {
         display: none;
     }
