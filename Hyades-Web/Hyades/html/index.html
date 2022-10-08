@@ -33,7 +33,7 @@
    </head>
    <body>
       <!-- header section start -->
-      <div class="header_section">
+      <div class="header_section" id="header">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="logo" href="index.html"><img src="images/HYADES.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,11 +85,11 @@
          <div class="container-fluid">
             <div class="row" id="o_que_e">
                <div class="col-md-6 text-center align-self-center">
-                  <img src="images/img-site.png" alt="" class="img-fluid sobre-img">
+                  <img src="images/logo-hyades-preto.png" alt="" class="img-fluid">
                </div>
                <div class="col-md-6 align-self-center">
 
-                  <h2 class="title_sobre">O que é Hyades?</h2>
+                  <h2 class="title_sobre">O que é o Hyades?</h2>
 
                   <h4 class="subtitle_sobre">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum autem omnis beatae ea dignissimos soluta quod molestias? Omnis, quasi, quod;</h4>
 
@@ -117,7 +117,6 @@
                   <img src="images/img-site.png" alt="" class="img-fluid sobre-img">
                </div>
                <div class="col-md-6 align-self-center">
-
                   <h2 class="title_sobre">O que temos de diferente?</h2>
 
                   <h4 class="subtitle_sobre">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum autem omnis beatae ea dignissimos soluta quod molestias? Omnis, quasi, quod;</h4>
@@ -135,19 +134,13 @@
          <div class="container">
             <div class="movies_menu">
                <ul>
-                  <li class="active"><a href="#">Overview</a></li>
-                  <li><a href="tv.html">TV</a></li>
-                  <li><a href="movies.html">Movies</a></li>
-                  <li><a href="#">Show</a></li>
-                  <li><a href="celebs.html">Celeb</a></li>
-                  <li><a href="#">Sports</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Cartoon</a></li>
+                  <li><a href="#gen-1">Gênero 1</a></li>
+                  <li><a href="#gen-2">Gênero 2</a></li>
+                  <li><a href="#gen-3">Gênero 3</a></li>
                </ul>
             </div>
             <div class="movies_section_2 layout_padding">
-               <h2 class="letest_text">Letest Movies</h2>
-               <div class="seemore_bt"><a href="#">See More</a></div>
+               <h2 class="letest_text" id="gen-1">Gênero 1</h2>
                <div class="movies_main">
                   <div class="iamge_movies_main">
                      <div class="iamge_movies">
@@ -203,9 +196,8 @@
                   </div>
                </div>
             </div>
-            <div class="movies_section_2 layout_padding">
-               <h2 class="letest_text">Gênero 1</h2>
-               <div class="seemore_bt"><a href="#">See More</a></div>
+            <div class="movies_section_2 layout_padding" id="gen-2">
+               <h2 class="letest_text">Gênero 2</h2>
                <div class="movies_main">
                   <div class="iamge_movies_main">
                      <div class="iamge_movies">
@@ -260,9 +252,8 @@
                   </div>
                </div>
             </div>
-            <div class="movies_section_2 layout_padding">
-               <h2 class="letest_text">Gênero 2 </h2>
-               <div class="seemore_bt"><a href="#">See More</a></div>
+            <div class="movies_section_2 layout_padding" id="gen-3">
+               <h2 class="letest_text">Gênero 3 </h2>
                <div class="movies_main">
                   <div class="iamge_movies_main">
                      <div class="iamge_movies">
@@ -378,8 +369,7 @@
          <div class="container">
             <div class="footer_menu">
                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="movies.html">Movies</a></li>
+                  <li><a href="#header">Início</a></li>
                </ul>
             </div>
          </div>
