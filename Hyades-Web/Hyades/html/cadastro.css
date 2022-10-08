@@ -1,0 +1,88 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background:linear-gradient(-45deg, #000000, #101036, #4873a1 )
+}
+.button{
+
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 40px;
+    background-color: #4054c4;
+    border: none   ;
+    border-radius: 9px;
+}
+.button:hover {
+
+  color: #eceef3;
+
+}
+
+.form-signin {
+  max-width: 600px;
+  padding: 15px;
+  position: relative;
+  top: 318px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.418);
+  border-radius: 2px;
+  padding: 60px;
+  width: min-content;
+
+}
+
+.form-signin input{
+
+   
+  background-color: rgba(255, 255, 255, 0.680);
+  outline: none;
+  border: 2px solid transparent;
+  padding: 15px;
+  font-size: 15px;
+  color: #f7eeee;
+  transform: all 0.4s ease;
+
+}
+
+
+.form-signin h1{ 
+
+  position: relative;
+  top: -20px;
+  font-size: 25px;
+}
+
+.checkbox {
+    color: #FFF;
+    font-style: #fff;
+
+}
+.checkbox  mb-3 {
+    color: rgb(255, 255, 255);
+    font-style: rgb(255, 255, 255);
+
+}
+.logoh{
+
+  position: absolute;
+  top: 30px;
+  left: 20px;
+
+}
+.registro{
+    color: #FFF;
+    font-size:  25px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
