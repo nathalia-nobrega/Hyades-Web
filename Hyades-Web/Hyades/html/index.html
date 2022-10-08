@@ -33,7 +33,7 @@
    </head>
    <body>
       <!-- header section start -->
-      <div class="header_section">
+      <div class="header_section" id="header">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="logo" href="index.html"><img src="images/HYADES.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,14 +42,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                     <a class="nav-link" href="#hyades_section">Conheça o Hyades</a>
+                     <a class="nav-link" href="#o_que_e">Conheça o Hyades</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#objetivo_section" class="nav-link">Objetivos</a>
+                    <a href="#objetivos" class="nav-link">Objetivos</a>
                   </li>
                   <li class="nav-item">
-                     <!-- #problema nesta tag -->
-                     <a class="nav-link" href="#quem_somos_section">Quem Somos</a>
+                    
+                     <a class="nav-link" href="#team_section">Quem Somos</a>
                   </li>
                </ul>
                <div class="search_icon"><a href="playlist.html"><img src="images/playlist.png"><span class="padding_left_15">Playlists</span></a></div>
@@ -83,13 +83,13 @@
       <!-- o que é hyades section start -->
       <section class="arrival_section layout_padding" id="sobre_section">
          <div class="container-fluid">
-            <div class="row">
+            <div class="row" id="o_que_e">
                <div class="col-md-6 text-center align-self-center">
-                  <img src="images/img-site.png" alt="" class="img-fluid sobre-img">
+                  <img src="images/logo-hyades-preto.png" alt="" class="img-fluid">
                </div>
                <div class="col-md-6 align-self-center">
 
-                  <h2 class="title_sobre">O que é Hyades?</h2>
+                  <h2 class="title_sobre">O que é o Hyades?</h2>
 
                   <h4 class="subtitle_sobre">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum autem omnis beatae ea dignissimos soluta quod molestias? Omnis, quasi, quod;</h4>
 
@@ -97,7 +97,7 @@
                </div>
             </div>   
 
-            <div class="row border-top">
+            <div class="row border-top" id="objetivos">
                <div class="col-md-6 align-self-center">
 
                   <h2 class="title_sobre">Por que estamos criando ele?</h2>
@@ -112,12 +112,11 @@
                </div>
             </div>  
 
-            <div class="row border-top">
+            <div class="row border-top" id="diferencial">
                <div class="col-md-6 text-center align-self-center">
                   <img src="images/img-site.png" alt="" class="img-fluid sobre-img">
                </div>
                <div class="col-md-6 align-self-center">
-
                   <h2 class="title_sobre">O que temos de diferente?</h2>
 
                   <h4 class="subtitle_sobre">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum autem omnis beatae ea dignissimos soluta quod molestias? Omnis, quasi, quod;</h4>
@@ -135,19 +134,13 @@
          <div class="container">
             <div class="movies_menu">
                <ul>
-                  <li class="active"><a href="#">Overview</a></li>
-                  <li><a href="tv.html">TV</a></li>
-                  <li><a href="movies.html">Movies</a></li>
-                  <li><a href="#">Show</a></li>
-                  <li><a href="celebs.html">Celeb</a></li>
-                  <li><a href="#">Sports</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Cartoon</a></li>
+                  <li><a href="#gen-1">Gênero 1</a></li>
+                  <li><a href="#gen-2">Gênero 2</a></li>
+                  <li><a href="#gen-3">Gênero 3</a></li>
                </ul>
             </div>
             <div class="movies_section_2 layout_padding">
-               <h2 class="letest_text">Letest Movies</h2>
-               <div class="seemore_bt"><a href="#">See More</a></div>
+               <h2 class="letest_text" id="gen-1">Gênero 1</h2>
                <div class="movies_main">
                   <div class="iamge_movies_main">
                      <div class="iamge_movies">
@@ -203,9 +196,8 @@
                   </div>
                </div>
             </div>
-            <div class="movies_section_2 layout_padding">
-               <h2 class="letest_text">Gênero 1</h2>
-               <div class="seemore_bt"><a href="#">See More</a></div>
+            <div class="movies_section_2 layout_padding" id="gen-2">
+               <h2 class="letest_text">Gênero 2</h2>
                <div class="movies_main">
                   <div class="iamge_movies_main">
                      <div class="iamge_movies">
@@ -260,9 +252,8 @@
                   </div>
                </div>
             </div>
-            <div class="movies_section_2 layout_padding">
-               <h2 class="letest_text">Gênero 2 </h2>
-               <div class="seemore_bt"><a href="#">See More</a></div>
+            <div class="movies_section_2 layout_padding" id="gen-3">
+               <h2 class="letest_text">Gênero 3 </h2>
                <div class="movies_main">
                   <div class="iamge_movies_main">
                      <div class="iamge_movies">
@@ -324,7 +315,7 @@
       <!-- movies section end -->
 
       <!-- quem somos section start -->
-         <section class="team-grid arrival_section layout_padding">
+         <section class="team-grid arrival_section layout_padding" id="team_section">
             <div class="container">
                <div class="intro">
                   <h2 class="text-center">Conheça nosso time</h2>
@@ -378,8 +369,7 @@
          <div class="container">
             <div class="footer_menu">
                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="movies.html">Movies</a></li>
+                  <li><a href="#header">Início</a></li>
                </ul>
             </div>
          </div>
