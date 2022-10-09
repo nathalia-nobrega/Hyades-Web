@@ -421,15 +421,9 @@ button {
 }
 
 .sobre-img {
-    transition: transform 1.3s ease;
-    overflow: hidden;
     margin-top: 30px;
 }
 
-.sobre-img:hover {
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    transform: scale(1.1);
-}
 
 
 .movie_main {
