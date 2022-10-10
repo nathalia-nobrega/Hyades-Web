@@ -568,6 +568,10 @@ button {
     color: #ffffff;
 }
 
+.gen-description {
+    color: rgba(255, 255, 255, 0.596);
+}
+
 .seemore_bt {
     width: 100%;
     float: right;

@@ -6,9 +6,7 @@ body {
 body {
   display: flex;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background:linear-gradient(-45deg, #000000, #101036, #4873a1 )
+  background:linear-gradient(-45deg, #000000, #1d1d77, #4873a1 )
 }
 .button{
 
@@ -25,20 +23,17 @@ body {
   color: #eceef3;
 
 }
-
 .form-signin {
-
-  max-width: 520px;
-  padding: 15px;
+  max-width: 450px;
+  padding: 10px;
   position: relative;
-  top: 50%;
-  left: 270px;
+  top: 48%;
+  left: 220px;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.479);
-  border-radius: 20px;
-  padding: 20px;
-  width: max-content;
-
+  background: rgba(0, 0, 0, 0.418);
+  border-radius: 10px;
+  padding: 40px;
+  width: min-content;
 }
 
 .form-signin input{
@@ -47,11 +42,11 @@ body {
   background-color: rgba(255, 255, 255, 0.680);
   outline: none;
   border: 2px solid transparent;
-  border-radius: 8px;
   padding: 15px;
   font-size: 15px;
   color: #f7eeee;
   transform: all 0.4s ease;
+
 
 }
 

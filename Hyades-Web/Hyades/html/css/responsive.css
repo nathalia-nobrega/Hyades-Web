@@ -378,7 +378,9 @@
         display: none;
     }
     .banner_section {
-        background: #3c0e0e;
+        background-image: url(../images/walle-banner.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
     .banner_taital {
         width: 95%;
