@@ -258,7 +258,8 @@ button {
 .search_icon {
     font-size: 18px;
     color: #000;
-    padding-left: 30px;
+    padding-left: 15px;
+
 }
 
 .banner_section {
@@ -926,4 +927,22 @@ input.email_text::placeholder {
     color: #d89616;
 }
 
+
+
+
+
+
+
+
+.search-text{
+    background: none;
+    border: 0;
+    padding-right: 15px;
+    outline: 0;
+    font-size: 16px;
+    width: 0px;
+    transition: 0.4s;
+    cursor: pointer;
+    
+}
 
