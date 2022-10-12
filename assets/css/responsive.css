@@ -143,19 +143,10 @@
     .banner_taital {
         font-size: 42px;
     }
-    .arrival_text {
-        font-size: 28px;
-    }
     .arrival_text::after {
         right: initial;
         width: 70px;
         top: 32px;
-    }
-    .mins_text_1 {
-        font-size: 15px;
-    }
-    .mins_text {
-        font-size: 15px;
     }
     .long_text {
         font-size: 14px;
@@ -172,19 +163,11 @@
     .icon_2 {
         font-size: 13px;
     }
-    .movies_menu::after {
-        width: 670px;
-        left: initial;
-        top: -10px;
-    }
     .movies_menu {
         width: 100%;
     }
     .movies_menu li {
         padding: 0px 14px;
-    }
-    .Cooming_soon_taital {
-        font-size: 30px;
     }
     .Cooming_soon_taital::after {
         right: initial;
@@ -336,9 +319,6 @@
     .iamge_movies {
         margin: 0px;
     }
-    .newsletter_text {
-        font-size: 34px;
-    }
     .box_main {
         width: 100%;
         padding: 20px;
@@ -400,7 +380,11 @@
     .banner_text {
         width: 100%;
     }
-
+    .see_bt {
+        width: 170px;
+        margin: 0 auto;
+        text-align: center;
+    }
     .replace-text {
         visibility: hidden;
     }

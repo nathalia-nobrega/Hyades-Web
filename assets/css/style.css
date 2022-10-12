@@ -1,17 +1,6 @@
 /*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 
-
-/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-
-
-/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
- 2) font-family: 'Poppins', sans-serif;
- ----------------------------------------*****/
-
-
-/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
 
 @import url(animate.min.css);
 @import url(normalize.css);
@@ -43,6 +32,7 @@ body {
     font-family: poppins;
     line-height: 1.80857;
     font-weight: normal;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 
@@ -188,6 +178,10 @@ img {
 
 .navbar-form input {
     border: none !important;
+}
+
+.navbar-nav li {
+    font-size: 1.2em;
 }
 
 .badge {
