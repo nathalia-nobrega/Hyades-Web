@@ -274,6 +274,16 @@
     .banner_text {
         width: 100%;
     }
+
+    .replace-text {
+        visibility: hidden;
+    }
+    
+    .replace-text::after {
+        content: "À  procura da felicidade (2006)";
+        visibility: visible;
+        text-align: center;
+    }
     
     .play_icon {
         display: none;
@@ -389,6 +399,16 @@
     }
     .banner_text {
         width: 100%;
+    }
+
+    .replace-text {
+        visibility: hidden;
+    }
+    
+    .replace-text::after {
+        content: "Wall-E (2008)";
+        visibility: visible;
+        text-align: center;
     }
     .play_icon {
         display: none;
