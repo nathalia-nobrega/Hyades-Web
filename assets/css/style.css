@@ -529,21 +529,6 @@ button {
     position: relative;
 }
 
-.movies_menu:after {
-    content: '';
-    border: 1px solid #ffffff;
-    position: relative;
-    width: 890px;
-    text-align: center;
-    right: 0;
-    top: -2px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    left: -20px;
-    z-index: 0;
-}
-
 .movies_menu li.active a {
     color: #DAA21B;
     border-bottom: 5px solid #DAA21B;
