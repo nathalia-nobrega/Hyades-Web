@@ -812,64 +812,33 @@ input.email_text::placeholder {
     margin: 0px;
 }
 
-.footer_section {
-    width: 100%;
-    float: left;
-    background-color: #212121;
-    height: auto;
-    padding: 90px 0px;
+.footer {
+    background-color: #121212;
+    padding: 7em 0;
 }
 
-.footer_menu {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
+.footer .footer-heading a {
+    color: #fff;
+    font-size: 1.5em;
 }
 
-.footer_menu ul {
-    margin: 0px;
-    padding: 0px;
-    display: inline-block;
-    text-align: center;
+.footer .menu a {
+    color: rgba(255,255,255,.6);
+    margin: 0 10px;
+    letter-spacing: 1px;
 }
 
-.footer_menu li {
-    float: left;
-    font-size: 18px;
-    color: #ffffff;
-    padding: 0px 25px;
+.footer p {
+    color: rgba(255,255,255,.3);
 }
 
-.footer_menu li a {
-    color: #ffffff;
+.footer a {
+    color: #a3de83;
 }
 
-.footer_menu li a:hover {
-    color: #d89616;
+.social-icons img{
+    padding: 5px;
 }
-
-.social_icon {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.social_icon ul {
-    margin: 0px;
-    padding: 0px;
-    display: inline-block;
-}
-
-.social_icon li {
-    float: left;
-    padding: 25px 5px 0px 5px;
-}
-
-.github-links {
-    color: white;
-    margin-left: 5px;
-}
-
 .iamge_movies_main {
     width: 100%;
     display: flex;
