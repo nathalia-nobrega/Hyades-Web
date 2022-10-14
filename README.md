@@ -1,2 +1,2 @@
 # Hyades-Web
-Repositório da versão Web do Hyades
+Repositório da versão WEB do Hyades

@@ -314,7 +314,8 @@
         font-size: 24px;
     }
     .iamge_movies_main {
-        display: initial;
+        display: inline-block;
+        width: 65%;
     }
     .iamge_movies {
         margin: 0px;
@@ -432,7 +433,8 @@
         margin: 0;
     }
     .iamge_movies_main {
-        display: initial;
+        display: inline-block;
+        width: 50%;
     }
     .newsletter_text {
         font-size: 21px;

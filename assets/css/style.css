@@ -515,7 +515,7 @@ button {
     float: left;
     font-size: 18px;
     color: #ffffff;
-    padding: 0px 25px;
+    padding: 0px 15px;
 }
 
 .movies_menu li a {
@@ -551,6 +551,9 @@ button {
 .gen-description {
     color: rgba(255, 255, 255, 0.596);
 }
+.redirecionar-filme h1:hover{
+    text-decoration: underline;
+}
 
 .seemore_bt {
     width: 100%;
@@ -578,6 +581,7 @@ button {
     position: relative;
     width: 100%;
     padding-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .image {
@@ -827,6 +831,9 @@ input.email_text::placeholder {
     margin: 0 10px;
     letter-spacing: 1px;
 }
+.footer .menu a:hover {
+    color: rgb(255, 255, 255);
+}
 
 .footer p {
     color: rgba(255,255,255,.3);
@@ -835,10 +842,10 @@ input.email_text::placeholder {
 .footer a {
     color: #a3de83;
 }
-
 .social-icons img{
     padding: 5px;
 }
+
 .iamge_movies_main {
     width: 100%;
     display: flex;
