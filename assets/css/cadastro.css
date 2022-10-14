@@ -24,16 +24,17 @@ body {
 
 }
 .form-signin {
-  max-width: 450px;
-  padding: 10px;
+  
+  max-width: 420px;
   position: relative;
-  top: 48%;
-  left: 220px;
-  transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.418);
   border-radius: 10px;
-  padding: 40px;
+  padding: 5px;
   width: min-content;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
 }
 
 .form-signin input{
