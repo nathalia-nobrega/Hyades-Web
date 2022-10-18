@@ -349,20 +349,14 @@ button {
 .image_1 {
     width: 100%;
     float: left;
-    background-image: url(../images/img-1.png);
     height: auto;
-    background-size: 100%;
-    background-repeat: no-repeat;
     padding-bottom: 40px;
 }
 
 .image_2 {
     width: 100%;
     float: left;
-    background-image: url(../images/img-2.png);
     height: auto;
-    background-size: 100%;
-    background-repeat: no-repeat;
     padding-bottom: 40px;
 }
 
@@ -456,11 +450,8 @@ button {
     float: left;
 }
 
-.icon_2 {
-    width: 100%;
-    float: left;
-    font-size: 17px;
-    color: #000;
+.imdb-icon {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .padding_10 {
@@ -652,23 +643,6 @@ button {
     background-color: #ffffff;
 }
 
-.newsletter_section {
-    width: 100%;
-    float: left;
-    background-image: url(../images/newsletter-bg.png);
-    height: auto;
-    padding-bottom: 90px;
-    background-size: 100%;
-}
-
-.newsletter_text {
-    width: 100%;
-    float: left;
-    text-align: center;
-    font-size: 40px;
-    color: #ffffff;
-    text-transform: uppercase;
-}
 
 .box_main {
     width: 65%;
