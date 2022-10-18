@@ -12,10 +12,11 @@ body {
 
     color: rgb(0, 0, 0);
     width: 100%;
+    margin-top: 20px;
+    position: relative;
     height: 40px;
-    
     background-color: #4054c4;
-    border: none   ;
+    border: none;
     border-radius: 9px;
     
 }
@@ -26,11 +27,11 @@ body {
 }
 .form-signin {
   
-  max-width: 420px;
+  max-width: 600px;
   position: relative;
   background: rgba(0, 0, 0, 0.418);
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   width: min-content;
   align-items: center;
   justify-content: center;
@@ -38,20 +39,29 @@ body {
 
 }
 
-.form-signin input{
+.form-signin input1{
 
-   
   background-color: rgba(255, 255, 255, 0.680);
   outline: none;
+  width: 20px;
+  position: relative;
+  margin-top: 10px;
+  padding: 10px;
   border: 2px solid transparent;
-  padding: 15px;
   font-size: 15px;
   color: #f7eeee;
   transform: all 0.4s ease;
 
-
 }
 
+.form-signin input{
+
+  position: relative;
+  margin-top: 15px;
+  padding: 40px;
+  margin-left: 5px;
+ 
+}
 
 .form-signin h1{ 
 
@@ -63,23 +73,33 @@ body {
 .checkbox {
     color: #FFF;
     font-style: #fff;
+    
 
 }
 .checkbox  mb-3 {
     color: rgb(255, 255, 255);
     font-style: rgb(255, 255, 255);
-
+    position: absolute;
+    right: 100px;
+    display: fel;
 }
-.logoh{
 
-  position: absolute;
-  top: 30px;
-  left: 20px;
+.registro {
 
-}
-.registro{
-    color: #FFF;
+    color: rgb(255, 255, 255);
     font-size:  25px;
+
+}
+.checkbox{
+
+
+
+}
+
+.agaquatro {
+  color: #FFF;
+  font-size:  20px;
+  margin-top: 20px;
 }
 
 .form-signin .form-floating:focus-within {
