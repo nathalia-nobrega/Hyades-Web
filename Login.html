@@ -18,12 +18,12 @@
         <img class="mb-4" src="assets/images/logo_ma_branco_tablet.png" alt="" width="195" height="195">
         <h1 class="registro">Iniciar Sessão</h1>
 
-        <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <div class="form-floating"><!--id="floatingInput"-->
+          <input type="email" class="form-control"  placeholder="name@example.com" id="email">
           <label for="floatingInput">Nome de usuário ou email</label>
         </div>
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <input type="password" class="form-control" placeholder="name@example.com" id="senha">
           <label for="floatingInput">Senha</label>
         </div>
 
@@ -40,9 +40,10 @@
             <input type="checkbox" value="remember-me"> Lembre-se de mim.
           </label>
         </div>
-        <button class="button" type="submit">Entrar</button>
+        <button class="button" type="submit" id="entrar">Entrar</button>
         <p class="mt-5 mb-3 text-muted">© 2021–2022</p>
       </form>
     </main>
+    <script src="assets/js/validar-login.js"></script>
   </body>
 </html>

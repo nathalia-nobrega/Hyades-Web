@@ -53,7 +53,7 @@ body {
   border: 2px solid transparent;
   position: relative;
   padding: 10px;
-  font-size: 10px;
+  font-size: 20px;
   color: #030202;
   transform: all 0.4s ease;
 
@@ -127,5 +127,9 @@ body {
 
 .form-signin .form-floating:focus-within {
   z-index: 2;
+}
+
+.errorInput {
+  border: 1px solid rgb(202, 44, 44) !important
 }
 
