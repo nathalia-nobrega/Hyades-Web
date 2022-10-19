@@ -3,17 +3,21 @@ body {
   height: 100%;
 }
 
-body {
+
+.text-center{
+
   display: flex;
   align-items: center;
   background:linear-gradient(-45deg, #000000, #1d1d77, #4873a1 )
 }
+
 .button{
 
     color: rgb(0, 0, 0);
-    width: 100%;
+    width: 80%;
     position: relative;
     height: 40px;
+    margin-bottom: 7vh;
     background-color: #4054c4;
     border: none;
     border-radius: 9px;
@@ -24,48 +28,60 @@ body {
   color: #eceef3;
 
 }
+
 .form-signin {
-  
+
   max-width: 600px;
-  height: 795px;
-  position: relative;
-  bottom: 5%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   background: rgba(0, 0, 0, 0.418);
+  padding: 4vh;
   border-radius: 10px;
-  align-items: center;
+  width: min-content;
   justify-content: center;
-  display: flex;
 
-}
+} 
 
-.form-signin input1{
 
+.form-signin input{
+
+   
   background-color: rgba(255, 255, 255, 0.680);
   outline: none;
-  width: 20px;
-  position: relative;
-  margin-top: 10px;
   border: 2px solid transparent;
-  font-size: 15px;
-  color: #f7eeee;
+  position: relative;
+  padding: 10px;
+  font-size: 10px;
+  color: #030202;
   transform: all 0.4s ease;
 
 }
 
-.form-signin input{
+.form-floating input {
 
   position: relative;
-  margin-bottom: 20px;
-  padding: 10px;
-  margin-left: 5px;
- 
+  top: -2vh;
+  margin-bottom: 18px;
+  height: fit-content;
+  font-size: 15px;
+
+}
+
+.form-floating label {
+
+    position: absolute;
+    top: -2vh;
+
 }
 
 .form-signin h1{ 
 
   position: relative;
-  top: -20px;
+  top: -35px;
   font-size: 25px;
+  color: #f7eeee;
 }
 
 .checkbox {
@@ -75,29 +91,38 @@ body {
 
 }
 .checkbox  mb-3 {
+
     color: rgb(255, 255, 255);
     font-style: rgb(255, 255, 255);
-    position: absolute;
-    right: 100px;
-    display: fel;
+    position: relative;
+    bottom: 10vh;
+    display: flex;
 }
 .mb-4 {
 
   position: relative;
-  top: 40px;
+  top: 3vh;
 }
 
-.registro {
+.box1 {
+
+  position: relative;
+  top: -0.9vh;
+
+} 
+
+.agadois{
 
     color: rgb(255, 255, 255);
     font-size:  25px;
-
+    position: fixed;
 }
 
 .agaquatro {
   color: #FFF;
-  font-size:  20px;
-  margin-top: 20px;
+  font-size:  22px;
+  margin-top: -2.5vh;
+
 }
 
 .form-signin .form-floating:focus-within {
