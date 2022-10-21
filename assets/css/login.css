@@ -6,8 +6,24 @@ body {
 body {
   display: flex;
   align-items: center;
-  background:linear-gradient(-45deg, #000000, #1d1d77, #4873a1 )
+  background:linear-gradient(-45deg, #000000, #1d1d77, #4873a1 );
+  background-size: 300%, 300%;
+  animation: colors 15s ease infinite;
+  padding: 20px;
 }
+
+@keyframes colors {
+  0%{
+      background-position: 0% 50%;
+  }
+  50%{
+      background-position: 100% 50%;
+  }
+  100%{
+      background-position: 0% 50%;
+  }
+}
+
 .button{
 
     position: relative;
@@ -29,7 +45,7 @@ body {
 
   max-width: 450px;
   position: relative;
-  background: rgba(0, 0, 0, 0.418);
+  background: rgba(0, 0, 0, 0.185);
   border-radius: 15px;
   padding: 27px;
   width: min-content;
