@@ -2,13 +2,22 @@ html,
 body {
   height: 100%;
 }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
 
+body{
 
-.text-center{
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background:linear-gradient(-45deg, #000000, #1d1d77, #4873a1 );
 
-  display: flex;
-  align-items: center;
-  background:linear-gradient(-45deg, #000000, #1d1d77, #4873a1 )
 }
 
 .button{
@@ -17,7 +26,7 @@ body {
     width: 80%;
     position: relative;
     height: 40px;
-    margin-bottom: 7vh;
+    margin-top: -8vh;
     background-color: #4054c4;
     border: none;
     border-radius: 9px;
@@ -29,15 +38,12 @@ body {
 
 }
 
-.form-signin {
+.form-signin  {
 
+  position: relative;
   max-width: 600px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
   background: rgba(0, 0, 0, 0.418);
-  padding: 4vh;
+  padding: 6vh;
   border-radius: 10px;
   width: min-content;
   justify-content: center;
@@ -55,24 +61,25 @@ body {
   padding: 10px;
   font-size: 20px;
   color: #030202;
-  transform: all 0.4s ease;
 
 }
 
 .form-floating input {
 
   position: relative;
-  top: -2vh;
-  margin-bottom: 18px;
+  top: -11vh;
+  border-radius: 5px;
   height: fit-content;
   font-size: 15px;
+  color: fff;
 
 }
+
 
 .form-floating label {
 
     position: absolute;
-    top: -2vh;
+    top: -11vh;
 
 }
 
@@ -80,6 +87,7 @@ body {
 
   position: relative;
   top: -35px;
+  top: -13vh;
   font-size: 25px;
   color: #f7eeee;
 }
@@ -87,8 +95,6 @@ body {
 .checkbox {
     color: #FFF;
     font-style: #fff;
-    
-
 }
 .checkbox  mb-3 {
 
@@ -101,27 +107,56 @@ body {
 .mb-4 {
 
   position: relative;
-  top: 3vh;
+  top: -7vh;
 }
+
 
 .box1 {
 
   position: relative;
-  top: -0.9vh;
+  right: 130px;
+
+} 
+.box2{
+
+  position: relative;
+  right: 83.5px;
+
+}
+.box3 {
+
+  position: relative;
+  left: 120px;
+  top: -48px;
+
+}
+.box4{ 
+
+  position: relative;
+  left: 113px;
+  top: -48px;
 
 } 
 
+.box5{ 
+
+  position: relative;
+  
+
+}
 .agadois{
 
     color: rgb(255, 255, 255);
     font-size:  25px;
     position: fixed;
+    top: 100%;
 }
 
 .agaquatro {
   color: #FFF;
   font-size:  22px;
-  margin-top: -2.5vh;
+  margin-top: -10vh;
+  align-items: center;
 
 }
 

@@ -19,26 +19,26 @@
         <img class="mb-4" src="assets/images/logo_ma_branco_tablet.png" alt="" width="195" height="195">
         <h1 class="registro">Cadastre-se, é grátis :)</h1> 
 
-        <div class="form-floating input1"><!--id="floatingInput"-->
+        <div class="form-floating input"><!--id="floatingInput"-->
           <input type="text" class="form-control" id="nome"  placeholder="name@example.com" maxlength="35">
           <label for="floatingInput">Nome de usuário</label>
         </div>
 
-        <div class="form-floating input1">
-          <input type="email" class="form-control" id="email" placeholder="name@example.com"maxlength="100">
+        <div class="form-floating input">
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" maxlength="100">
           <label for="floatingInput">Endereço de email</label>
         </div>
 
         <div class="form-floating input1">
           <input type="password" class="form-control" id="senha" placeholder="name@example.com" maxlength="25">
-          <label for="floatingInput">Senha</label>
+          <label for="floatingInput">Senha (min 8 caracteres)</label>
         </div>
 
         <div class="form-floating input1">
           <input type="password" class="form-control" id="senhaconfirmar" placeholder="Password" maxlength="25">
-          <label for="floatingPassword">Confirmação de senha</label>
+          <label for="floatingPassword">Confirmação de senha </label>
         </div>
-
+   
         <div class="form-floating input">
           <input type="date" class="form-control" id="nascimento" placeholder="ano de nascimento">
           <label for="floatingDate">Ano de nascimento</label>
@@ -48,16 +48,22 @@
         </div>
 
         <h4 class="agaquatro"> Escolha alguns tópicos para começar!</h4>
-
+        <div class="box5">
         <div class="checkbox">
           <label class="box1">
-            <input type="checkbox" value="valMA"> Meio ambiente                 
-            <input type="checkbox" value="valRAC"> Racismo e direitos humanos<br>
+            <input type="checkbox" value="valMA"> Meio ambiente   
+          </label> 
+          <div class="box2">        
+            <input type="checkbox" value="valRAC"> Racismo e direitos humanos
+          </div>  
+            <div class="box3">
             <input type="checkbox" value="valBuLL"> Bullying e discriminação
+          </div>
+            <div class="box4"> 
             <input type="checkbox" value="valDIR"> Direitos das mulheres
-          </label>
+          </div>
         </div>
-
+        </div>
         <button class="button" type="submit" id="enviar">Enviar</button>
       </form>
     </main>
