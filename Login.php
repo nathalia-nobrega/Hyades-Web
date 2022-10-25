@@ -19,11 +19,11 @@
         <h1 class="registro">Iniciar Sessão</h1>
 
         <div class="form-floating"><!--id="floatingInput"-->
-          <input type="email" class="form-control"  placeholder="name@example.com" id="email">
+          <input type="email" class="form-control"  placeholder="name@example.com" id="email" name="email">
           <label for="floatingInput">Nome de usuário ou email</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" placeholder="name@example.com" id="senha">
+          <input type="password" class="form-control" placeholder="name@example.com" id="senha" name="senha">
           <label for="floatingInput">Senha</label>
         </div>
 
