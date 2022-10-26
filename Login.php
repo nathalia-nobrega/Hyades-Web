@@ -1,3 +1,8 @@
+<?php
+//Iniciando a sessão pra exibir se o usuário ou a senha é inválido lá embaixo
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -14,9 +19,21 @@
 
 <body class="text-center">
     <main class="form-signin w-100 m-auto">
-      <form>
+    <?php
+            if(isset($_SESSION['nao_autenticado'])):
+         ?>
+
+        <div class="notification is-danger">
+            <p>ERRO: Usuário ou senha incorretos.</p>
+         </div>
+        <?php
+             endif;
+             unset($_SESSION['nao_autenticado']);
+        ?>
+      <form  action="logar.php" method="post" id="form">
         <img class="mb-4" src="assets/images/logo_ma_branco_tablet.png" alt="" width="195" height="195">
         <h1 class="registro">Iniciar Sessão</h1>
+        
 
         <div class="form-floating"><!--id="floatingInput"-->
           <input type="email" class="form-control"  placeholder="name@example.com" id="email" name="email">
