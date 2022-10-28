@@ -1,0 +1,25 @@
+body {
+    background: #2B3B55;
+}
+
+.heading-nome {
+    font-size: 1.7em;
+}
+
+.p-email {
+    font-size: 1.2em;
+    color: rgb(121, 117, 112);
+    text-decoration: underline;
+}
+
+.span-data-nasc {
+    font-size: 1.2em;
+}
+
+.heading-topicos {
+    font-size: 1.7em;
+}
+
+#logout:hover {
+    text-decoration: underline;
+}
