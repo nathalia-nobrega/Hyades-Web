@@ -1,3 +1,7 @@
+
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
@@ -35,7 +39,7 @@
       <!-- header section start -->
       <div class="header_section" id="header">
          <nav class="navbar navbar-expand-xl navbar-light bg-light">
-            <a class="logo" href="index.html"><img src="assets/images/HYADES.png" class="img-fluid logo-hyades"></a>
+            <a class="logo" href="index.php"><img src="assets/images/HYADES.png" class="img-fluid logo-hyades"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -52,9 +56,17 @@
                   </li>
                </ul>
                <!-- adicionar quando logado -->
+               <?php
+                  if(isset($_SESSION['email'])):
+               ?>
+               
+               <div class="search_icon" id="sumir1"><a href="playlist.html"><img src="assets/images/playlist.png"><span class="padding_left_15">Playlists</span></a></div>
+                 
+               <?php
 
-               <!-- <div class="search_icon" id="sumir1"><a href="playlist.html"><img src="assets/images/playlist.png"><span class="padding_left_15">Playlists</span></a></div> -->
-
+                  endif;
+               ?>
+               
                <div class="search_icon" id="sumir2"><a href="movies.html"><img src="assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
                <div class="search_icon" id="sumir3"><a href="Login.html"><img src="assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
 

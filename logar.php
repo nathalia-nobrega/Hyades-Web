@@ -24,14 +24,14 @@
              //Se retornar uma linha quer dizer que o usuario existe no bd e pode logar
             if($quantidade == 1){
                                             
-                $_SESSION['nome'] = $email;
+                $_SESSION['email'] = $email;
                 //Redireciona para a tela após o login
-                header('Location: index.html');
+                header('Location: index.php');
                 //echo "Login efetuado com sucesso!";
 	            exit();
             }else{
                 $_SESSION['nao_autenticado'] = true;
-                header('Location: login.php');
+                header('Location: Login.php');
                 echo "Falha ao logar email ou senha incorretos";
 	            exit();
                 

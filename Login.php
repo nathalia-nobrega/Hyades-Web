@@ -47,7 +47,7 @@ session_start();
         <div class="login_footer">
             <div class="login_footer">
                 <div class="login_cadastro">
-                    <span>Não tem conta?  <a href="cadastro.html">Registre-se.</a></span>
+                    <span>Não tem conta?  <a href="cadastro.php">Registre-se.</a></span>
                 </div>
 
             <div class="sign_up">

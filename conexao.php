@@ -1,8 +1,8 @@
 <?php 
 
-$usuario = 'root';
-$senha = '';
-$database = 'hyades';
+$usuario = 'id19776474_root';
+$senha = 'Jubinha@5002_20_21';
+$database = 'id19776474_hyades';
 //pode ser que dê erro sem a porta
 $host = 'localhost';
 
