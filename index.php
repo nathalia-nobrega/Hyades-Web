@@ -22,7 +22,7 @@
       <!-- Responsive-->
       <link rel="stylesheet" href="assets/css/responsive.css">
       <!-- fevicon -->
-      <link rel="icon" href="assets/images/tablettttttt-removebg-preview.png" width ="10%" height= "5%" />
+      <link rel="icon" href="assets/images/logo_ma_branco_tablet.png" width ="10%" height= "5%" />
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
