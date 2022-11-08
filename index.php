@@ -333,11 +333,11 @@
                      <a href="https://github.com/nathalia-nobrega/Hyades-Web" data-toggle="tooltip" data-placement="top" title="github" target="_blank">
                         <img src="assets/images/github-social.png" alt="GitHub">
                         </a>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <a href="https://twitter.com/VHSBLOND" data-toggle="tooltip" data-placement="top" title="Twitter">
                           <img src="assets/images/twitter-social.png" alt="twitter">
                         </a>
 
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram">
+                        <a href="https://instagram.com/dunordgr" data-toggle="tooltip" data-placement="top" title="Instagram">
                            <img src="assets/images/instagram-social.png" alt="instagram">
                         </a>
                      </div>

@@ -1,28 +1,28 @@
-html,
-body {
-  height: 100%;
-  
-}
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
 }
 
-.text-center{
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+}
 
+label.form-label {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
 
- justify-content: center;
- align-items: center;
- background: 100vh, 100vw;
- position: relative;
+label.form-check-label {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+.gradient {
  background:linear-gradient(-45deg, #000000, #1d1d77, #4873a1 );
  background-size: 300%, 300%;
  animation: colors 15s ease infinite;
-
- 
-
 }
 
 
@@ -39,150 +39,8 @@ body {
     }
 }
 
-.button{
-
-    color: rgb(0, 0, 0);
-    width: 80%;
-    position: relative;
-    height: 40px;
-    margin-top: -10vh;
-    background-color: #4054c4;
-    border: none;
-    border-radius: 9px;
-    
-}
-.button:hover {
-
-  color: #eceef3;
-
-}
-
-.form-signin {
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -25px 0 0 -25px;
-  transform: translate(-50%, -50%);
-  max-width: 600px;
+.card {
   background: rgba(0, 0, 0, 0.185);
-  padding: 4vh;
-  border-radius: 10px;
-  width: min-content;
-  justify-content: center;
-
-} 
-
-
-.form-signin input{
-
-   
-  background-color: rgba(255, 255, 255, 0.680);
-  outline: none;
-  border: 2px solid transparent;
-  position: relative;
-  padding: 10px;
-  font-size: 20px;
-  color: #030202;
-
-}
-
-.form-floating input {
-
-  position: relative;
-  top: -11vh;
-  border-radius: 8px;
-  height: fit-content;
-  font-size: 15px;
-  color: fff;
-
-}
-
-
-.form-floating label {
-
-    position: absolute;
-    top: -11vh;
-
-}
-
-.form-signin h1{ 
-
-  position: relative;
-  top: -35px;
-  top: -13vh;
-  font-size: 25px;
-  color: #f7eeee;
-}
-
-.checkbox {
-    color: #FFF;
-    font-style: #fff;
-}
-.checkbox  mb-3 {
-
-    color: rgb(255, 255, 255);
-    font-style: rgb(255, 255, 255);
-    position: relative;
-    bottom: 10vh;
-    display: flex;
-}
-.mb-4 {
-
-  position: relative;
-  top: -7vh;
-}
-
-
-.box1 {
-
-  position: relative;
-  right: 130px;
-
-} 
-.box2{
-
-  position: relative;
-  right: 83.5px;
-
-}
-.box3 {
-
-  position: relative;
-  left: 120px;
-  top: -48px;
-
-}
-.box4{ 
-
-  position: relative;
-  left: 113px;
-  top: -48px;
-
-} 
-
-.box5{ 
-
-  position: relative;
-  max-width: 100%;
-  align-items: center;
-  justify-content: center;
-
-}
-.agadois{
-
-    color: rgb(255, 255, 255);
-    font-size:  25px;
-    position: fixed;
-    top: 100%;
-}
-
-.agaquatro {
-  color: #FFF;
-  font-size:  22px;
-  margin-top: -10vh;
-  align-items: center;
-
 }
 
 .form-signin .form-floating:focus-within {
