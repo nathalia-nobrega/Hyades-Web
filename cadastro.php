@@ -55,7 +55,7 @@ session_start();
       
             <div class="form-outline mb-4 input1">
               <label for="floatingInput" class="form-label">Nome de usuário</label>
-              <input type="text" class="form-control form-control-lg" id="nome"  placeholder="name@example.com" maxlength="50" name="nome">
+              <input type="text" class="form-control form-control" id="nome"  placeholder="Seu nome" maxlength="50" name="nome">
             </div>
 
             <div class="form-outline mb-4 input1">
@@ -65,12 +65,12 @@ session_start();
 
           <div class="form-outline mb-4 input1">
             <label for="floatingInput" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="senha" placeholder="name@example.com" maxlength="50">
+            <input type="password" class="form-control" id="senha" placeholder="Sua senha" maxlength="50">
           </div>
 
           <div class="form-outline mb-4 input1">
             <label for="floatingPassword" class="form-label">Confirmação de senha</label>
-            <input type="password" class="form-control" id="senhaconfirmar" placeholder="Password" maxlength="50" name="senha">
+            <input type="password" class="form-control" id="senhaconfirmar" placeholder="Sua senha" maxlength="50" name="senha">
           </div>
 
           <div class="form-outline mb-4 input">
@@ -82,7 +82,6 @@ session_start();
 
           <div class="row col">
             <h4 class="fw-bold text-center mt-3"></h4>
-            <form class="px-4" action="">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="valMA" id="flexCheckDefault" />
                 <label class="form-check-label" for="flexCheckDefault">
@@ -113,7 +112,6 @@ session_start();
                 Direitos das mulheres
                 </label>
               </div>
-            </form>
           </div>
 
             <button class="button btn btn-primary btn-rounded w-50 d-block mx-auto my-3" type="submit" id="enviar">Enviar</button>
