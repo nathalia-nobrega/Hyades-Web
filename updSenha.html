@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Perfil</title>
+    <title>Redefinir minha senha</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <!-- style css -->
@@ -68,28 +68,31 @@
     <!-- perfil section start -->
     <section class="vh-100">
         <div class="container py-5 h-100">
-        <h2 class="text-center text-white">Minhas informações</h2>
+            <h2 class="m-3 py-4 text-center text-white">Redefinir senha</h2>
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-12 col-xl-4">
               <div class="card" style="border-radius: 15px;">
                 <div class="card-body text-center">
                   <div class="mt-3 mb-4">
-                  <h3 class="mb-2 heading-nome">Meu nome</h3>
-                  <p class="mb-4 p-email">Meu e-mail</p> 
-                  <span class="text-muted mb-4 span-data-nasc">Minha data de nascimento</span> 
-                  <br>
-                  <h3 class="mb-2 my-4 heading-topicos">Meus tópicos de preferencia</h3>
-                  <!-- os tópicos vão aparecer aqui, abaixo desse heading -->
+                    <div class="form-outline mb-4 input1">
+                    <form action="updSenha.php" method="post">
+                        <div class="form-outline mb-4 input1">
+                            <label for="floatingInput" class="form-label font-weight-bold">Senha atual</label>
+                            <input type="password" class="form-control" id="senhaAtual" name="senhaAtual" placeholder="Sua senha atual" maxlength="50">
+                        </div>
 
-                  <span class="text-muted mb-4 span-data-criac">Entrei em xx/xx</span> 
-                  <br>
-                  <button type="button" class="btn btn-primary btn-rounded btn-sm my-4">
-                    Atualizar meus dados
-                  </button>
-                  <br>
-                  <a href="updSenha.html" id="logout">Redefinir minha senha</a>
-                  <br>
-                  <a href="logout.php" id="logout">Sair</a>
+                        <div class="form-outline mb-4 input1">
+                            <label for="floatingInput" class="form-label font-weight-bold">Senha nova</label>
+                            <input type="password" class="form-control" id="senhaNova" name="senhaNova" placeholder="Sua nova senha" maxlength="50">
+                        </div>
+                        
+                        <div class="form-outline mb-4 input1">
+                            <label for="floatingInput" class="form-label font-weight-bold">Confirmar senha nova</label>
+                            <input type="password" class="form-control" id="confNova" name="confNova" placeholder="Confirme nova senha" maxlength="50">
+                        </div>
+
+                        <button class="button btn btn-primary btn-rounded w-50 d-block mx-auto my-3" type="submit" id="enviar">Redefinir</button>
+                    </form>
                 </div>
               </div>
       
