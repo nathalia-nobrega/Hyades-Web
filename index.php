@@ -35,7 +35,7 @@
       <!-- header section start -->
       <div class="header_section" id="header">
          <nav class="navbar navbar-expand-xl navbar-light bg-light">
-            <a class="logo" href="index.php"><img src="assets/images/HYADES.png" class="img-fluid logo-hyades"></a>
+            <a class="logo" href="index.php"><img src="assets/images/HYADES.png" alt="Logo Hyades - Voltar a tela inicial"  class="img-fluid logo-hyades"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -104,7 +104,7 @@
          <div class="container-fluid">
             <div class="row" id="o_que_e">
                <div class="col-md-6 text-center align-self-center">
-                  <img src="assets/images/tablet.png" alt="" width ="80%" class="img-fluid">
+                  <img src="assets/images/tablet.png" alt="Logotipo Hyades" width ="80%" class="img-fluid">
                </div>
                <div class="col-md-6 align-self-center">
 
@@ -126,7 +126,7 @@
                </div>
 
                <div class="col-md-6 text-center align-self-center">
-                  <img src="assets/images/education.png" alt="" class="img-fluid sobre-img">
+                  <img src="assets/images/education.png" alt="Pessoas conversando em reunião" class="img-fluid sobre-img">
                </div>
             </div>  
          </div>
@@ -153,7 +153,7 @@
                            <div class="iamge_movies">
                               <div class="image_3">
                                  <a href="filmes/marighella.html" class="redirecionar-filme">
-                               <img src="assets/images/filmes-poster/racismo/marighella.jpg" class="image" style="width:100%">
+                               <img src="assets/images/filmes-poster/racismo/marighella.jpg" alt= "Filme, Marighella, 2021" class="image" style="width:100%">
                               <div class="middle">
                            </div>
                         </div>
@@ -164,7 +164,7 @@
                      <div class="iamge_movies">
                         <div class="image_3">
                            <a href="filmes/selma.html" class="redirecionar-filme">
-                           <img src="assets/images/filmes-poster/racismo/selma.jpg" class="image" style="width:100%">
+                           <img src="assets/images/filmes-poster/racismo/selma.jpg" alt= "Filme, Selma: Uma Luta Pela Igualdade, 2014" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Selma: Uma Luta Pela Igualdade</h1>
                            <p class="there_text">2014, Reino Unido</p>
@@ -173,7 +173,7 @@
                      <div class="iamge_movies">
                         <div class="image_3">
                            <a href="filmes/menino-23.html" class="redirecionar-filme">
-                           <img src="assets/images/filmes-poster/racismo/menino-23.jpg" class="image" style="width:100%">
+                           <img src="assets/images/filmes-poster/racismo/menino-23.jpg" alt= "Filme, Menino 23 – Infâncias Perdidas no Brasil, 2016" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Menino 23 – Infâncias Perdidas no Brasil</h1>
                            <p class="there_text">2016, Brasil</p>
@@ -182,7 +182,7 @@
                      <div class="iamge_movies">
                         <div class="image_3">
                            <a href="filmes/13-emenda.html" class="redirecionar-filme">
-                           <img src="assets/images/filmes-poster/racismo/13-emenda.jpg" class="image" style="width:100%">
+                           <img src="assets/images/filmes-poster/racismo/13-emenda.jpg" alt= "Filme, A 13ª Emenda, 2016" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">A 13ª Emenda </h1>
                            <p class="there_text">2016, Estados Unidos</p>
@@ -191,7 +191,7 @@
                      <div class="iamge_movies">
                         <div class="image_3">
                            <a href="filmes/branco-sai.html" class="redirecionar-filme">
-                           <img src="assets/images/filmes-poster/racismo/branco-sai-preto-fica.jpg" class="image" style="width:100%">
+                           <img src="assets/images/filmes-poster/racismo/branco-sai-preto-fica.jpg" alt= "Filme, Branco Sai Preto Fica, 2014" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Branco Sai Preto Fica</h1>
                            <p class="there_text">2014, Brasil</p>
@@ -213,7 +213,7 @@
                         <div class="iamge_movies">
                          <div class="image_3">
                            <a href="filmes/extraordinario.html" class="redirecionar-filme">
-                           <img src="assets/images/filmes-poster/bullying/extraordinario.jpg" class="image" style="width:100%">
+                           <img src="assets/images/filmes-poster/bullying/extraordinario.jpg" alt= "Filme, Extraórdinario, 2017"  class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Extraórdinario</h1>
                            <p class="there_text">2017, Estados Unidos</p>
@@ -222,7 +222,7 @@
                      <div class="iamge_movies">
                         <div class="image_3">
                            <a href="filmes/vantagens-invisivel.html" class="redirecionar-filme">
-                              <img src="assets/images/filmes-poster/bullying/vantagens-de-ser-invisivel.jpg" class="image" style="width:100%">
+                              <img src="assets/images/filmes-poster/bullying/vantagens-de-ser-invisivel.jpg" alt= " Filme, As Vantagens de Ser Invisível, 2012" class="image" style="width:100%">
                               <h1 class="code_text">As Vantagens de Ser Invisível</h1>
                               <p class="there_text">2012, Estados Unidos </p>
                         </a>
@@ -231,7 +231,7 @@
                      <div class="iamge_movies">
                         <div class="image_3">
                            <a href="filmes/sete-minutos.html" class="redirecionar-filme">
-                           <img src="assets/images/filmes-poster/bullying/sete-minutos-depois-da-meia-noite.jpg" class="image" style="width:100%">
+                           <img src="assets/images/filmes-poster/bullying/sete-minutos-depois-da-meia-noite.jpg" alt= "Filme, Sete Minutos Depois da Meia-Noite, 2016" class="image" style="width:100%">
                         </div>
                         
                            <h1 class="code_text">Sete Minutos Depois da Meia-Noite</h1>
@@ -241,7 +241,7 @@
                      <div class="iamge_movies">
                         <a href="filmes/no-ritmo-coracao.html" class="redirecionar-filme">
                         <div class="image_3">
-                           <img src="assets/images/filmes-poster/bullying/no-ritmo-do-coracao.jpg" class="image" style="width:100%">
+                           <img src="assets/images/filmes-poster/bullying/no-ritmo-do-coracao.jpg" alt= "Filme, No Ritmo do Coração, 2021" class="image" style="width:100%">
                         </div>
 
                            <h1 class="code_text">No Ritmo do Coração</h1>
@@ -251,7 +251,7 @@
                      <div class="iamge_movies">
                         <div class="image_3">
                            <a href="filmes/lily-chou.html" class="redirecionar-filme">
-                           <img src="assets/images/filmes-poster/bullying/tudo-sobre-lily.jpg" class="image" style="width:100%">
+                           <img src="assets/images/filmes-poster/bullying/tudo-sobre-lily.jpg" alt= "Filme, Tudo sobre Lily Chou-Chou, 2001" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Tudo sobre Lily Chou-Chou</h1>
                            <p class="there_text">2001, Japão</p>
@@ -275,7 +275,7 @@
 
                <div class="row mb-5 people d-flex justify-content-center" id="quem_somos_section">
                   <div class="col-md-4 col-lg-3 item">
-                     <div class="box" style="background-image:url(assets/images/julio.png);">
+                     <div class="box" style="background-image:url(assets/images/julio.png);" alt="Foto, júlio sampaio">
                      <div class="cover">
                         <h3 class="text-center container-fluid name_member">Júlio Matheus</h3>
                         <p class="title_member">Estudante de programação Front-end</p>
@@ -287,7 +287,7 @@
                   </div>
                </div>
                   <div class="col-md-4 col-lg-3 item">
-                     <div class="box" style="background-image:url(assets/images/joao.png)">
+                     <div class="box" style="background-image:url(assets/images/joao.png)" alt="Foto, joão raposo" >
                      <div class="cover">
                         <h3 class="name_member text-center container-fluid">João Vitor</h3>
                         <p class="title_member">Estudante de programação Back-end</p>
@@ -300,7 +300,7 @@
                </div>
             
                <div class="col-md-4 col-lg-3 item">
-                  <div class="box" style="background-image:url(assets/images/nathalia.png);">
+                  <div class="box" style="background-image:url(assets/images/nathalia.png);" alt="Foto, nathalia nóbrega">
                   <div class="cover">
                      <h3 class="text-center container-fluid name_member">Nathalia Nóbrega</h3>
                      <p class="title_member">Estudante de programação Front-end</p>

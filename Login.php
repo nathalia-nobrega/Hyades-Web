@@ -32,7 +32,7 @@ session_start();
              unset($_SESSION['nao_autenticado']);
         ?>
       <form  action="logar.php" method="post" id="form">
-        <img class="mb-4" src="assets/images/logo_ma_branco_tablet.png" alt="" width="195" height="195">
+        <img class="mb-4" src="assets/images/logo_ma_branco_tablet.png" alt="logo Hyades" width="195" height="195">
         <h1 class="registro">Iniciar Sessão</h1>
         
 
