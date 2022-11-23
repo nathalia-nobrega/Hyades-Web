@@ -1,3 +1,20 @@
+<?php
+
+include("conexao.php");
+
+ $pesquisa = mysqli_real_escape_string($conn,trim($_POST['pesq']));
+
+strtoupper($pesquisa);
+
+//pesquisa por palavra-chave
+
+    $sql = "SELECT * FROM filme WHERE titulo LIKE '%$pesquisa%' OR pais_origem LIKE '%$pesquisa%' ";
+    $result = $conn->query($sql) or die("Falha na execução do código sql: ");
+
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
@@ -28,6 +45,10 @@
       <!-- owl stylesheets --> 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+      
+      <!--Script da pesquisa-->
+      <script defer src="assets/js/sumir.js"></script>
+      
    </head>
    <body>
       <!-- header section start -->
@@ -47,22 +68,100 @@
 
                </ul>
                <!-- adicionar quando logado -->
+               <?php
+                  if(isset($_SESSION['email'])):
+               ?>
+               
+               <div class="search_icon" id="sumir1"><a href="playlist.html"><img src="assets/images/playlist.png"><span class="padding_left_15">Playlists</span></a></div>
+                 
+               <?php
 
-               <!-- <div class="search_icon" id="sumir1"><a href="playlist.html"><img src="assets/images/playlist.png"><span class="padding_left_15">Playlists</span></a></div> -->
-               <div class="search_icon"><a href="Login.php"><img src="assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
-               <div class="search_icon"><a href="#"><img src="assets/images/search-icon.png"><span class="padding_left_15">Pesquisar</span></a></div>
+                  endif;
+               ?>
+               
+               <div class="search_icon" id="sumir2"><a href="movies.html"><img src="assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
+               <?php
+                  if(isset($_SESSION['email'])){
+               ?>
+               
+               <div class="search_icon" id="sumir3"><a href="perfil.php"><img src="assets/images/user-icon.png"><span class="padding_left_15">Meu Perfil</span></a></div>
+                 
+               <?php
+
+                  }else{
+                      
+                  
+               ?>
+               
+               
+            <div class="search_icon" id="sumir3"><a href="Login.php"><img src="assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
+            <?php
+                  }
+            ?>
+               <!-- barra de pesquisa start-->
+                  <form action="pesquisar.php" method="POST" name="form"  class="form">
+                     <input type="search" class="search-text" name="pesq" placeholder="Pesquisar..." >
+                     <a class="search-btn">
+                        <img class = "loupe" src="assets/images/search-icon.png" alt="">
+                     
+                  </form>
+               <!-- barra de pesquisa end -->
+
+                  <span class="search_icon" id="pesqtxt" class="padding_left_15" >Pesquisar</span></a>
             </div>
          </nav>
       </div>
       <!-- header section end -->
       <!-- movies section start -->
-      <div class="movies_section layout_padding">
-         <div class="container">
-            
-           <h2 class="text-white">X resultados para a sua pesquisa</h2>
+<div class="movies_section layout_padding">
+            <div class="container-fluid">
+               <!-- start código php -->
+               <?php
 
+                  if ($result->num_rows == 0) {
+                        
+                     echo "<h1>Nenhum resultado encotrado</h1>";
+               
+                  }else{
+                     // output data of each row
+                     echo "<h1 class='text-white'>$result->num_rows resultado(s) para a sua pesquisa: $pesquisa</h1>";
+                     
+                     
+                     
+                ?>
+
+                <!-- end código php -->
+               <div class="movies_section_2 layout_padding">
+                  <div class="rol justify-content-center">
+                     <div class="col-lg-6 text-center">
+                        <div class="movies_main">
+                           <div class="iamge_movies_main">
+                               <?php
+                               while($dados = $result->fetch_assoc()) {
+                                   ?>
+                               
+                              <div class="iamge_movies">
+                                    <a href="<?php echo$dados['link_filme']?>" class="redirecionar-filme">
+                                       <img src="<?php echo$dados['imagem']?>" class="image-fluid" style="width:55%">
+                                       <h1 class="code_text"><?php echo$dados['titulo']?></h1>
+                                       <p class="there_text"><?php echo$dados['pais_origem']?></p> 
+                                    </a>
+                              </div>
+                              <?php
+                   
+               }
+               ?>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+            <?php
+            }
+            ?>
+            </div>
          </div>
-      </div>
       
       <!-- movies section end -->
       <!-- footer  section start -->
