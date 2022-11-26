@@ -28,8 +28,6 @@
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
       <!-- font awesome -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-      <script defer src="assets/js/sumir.js"></script>
    </head>
    <body>
       <!-- header section start -->
@@ -56,7 +54,12 @@
                   if(isset($_SESSION['email'])):
                ?>
                
-               <div class="search_icon" id="sumir1"><a href="playlist.html"><img src="assets/images/playlist.png"><span class="padding_left_15">Playlists</span></a></div>
+               <div class="search_icon" id="sumir1">
+                  <a href="playlist.html">
+                     <img src="assets/images/playlist.png">
+                     <span class="padding_left_15">Playlists</span>
+                  </a>
+               </div>
                  
                <?php
 
@@ -343,17 +346,17 @@
                   <p class="menu">
                      <a href="#">INICIO</a>
                      <a href="#">CONFIGURAÇÕES</a>
-                     <a href="#">LGPD</a>
+                     <a href="lgpd.html">LGPD</a>
                   </p>
                   <div class="social-icons">
                      <a href="https://github.com/nathalia-nobrega/Hyades-Web" data-toggle="tooltip" data-placement="top" title="github" target="_blank">
                         <img src="assets/images/github-social.png" alt="GitHub">
                         </a>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <a href="https://twitter.com/Ja1Raposo" data-toggle="tooltip" data-placement="top" title="Twitter">
                           <img src="assets/images/twitter-social.png" alt="twitter">
                         </a>
 
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram">
+                        <a href="https://www.instagram.com/dunordgr/" data-toggle="tooltip" data-placement="top" title="Instagram">
                            <img src="assets/images/instagram-social.png" alt="instagram">
                         </a>
                      </div>
@@ -380,6 +383,7 @@
       </div>
       <!-- copyright section end -->
       <!-- Javascript files-->
+      <script src="assets/js/sumir.js"></script>
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/popper.min.js"></script>
       <script src="assets/js/bootstrap.bundle.min.js"></script>
