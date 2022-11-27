@@ -3,12 +3,24 @@
     include("conexao.php"); 
     
      $email  = $_SESSION['email'];
-     $sql_code = "SELECT nome,nascimento FROM usuario WHERE email = '{$email}' ";
+     $sql_code = "SELECT nome,nascimento,topicos FROM usuario WHERE email = '{$email}' ";
      $sql_query = mysqli_query($conn,$sql_code) or die ("Falha na execução do código sql: ".$mysqli->error);
     
     $dados  = $sql_query->fetch_assoc();
     $nome = $dados['nome'];
     $nascimento = $dados['nascimento'];
+    $topicos = $dados['topicos'];
+
+    //formatando a forma com que os tópicos vão aparecer no perfil
+    if ($topicos == "valMA") {
+       $topicos = "Meio Ambiente";
+    } elseif ($topicos == "valRAC") {
+      $topicos = "Racismo e Direitos Humanos";
+    } elseif ($topicos == "valBuLL") {
+      $topicos = "Bullying e Discriminação";
+    } else {
+      $topicos = "Direitos das Mulheres";
+    }
     
     
 ?>
@@ -46,27 +58,23 @@
         <nav class="navbar navbar-expand-xl navbar-light bg-light">
            <a class="logo" href="index.php"><img src="assets/images/HYADES.png" class="img-fluid logo-hyades"></a>
            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-           </button>
-           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                 <li class="nav-item">
-                    <a class="nav-link" href="index.php#o_que_e">Conheça o Hyades</a>
-                 </li>
-                 <li class="nav-item">
-                   <a href="index.php#sugestoes" class="nav-link">Sugestões</a>
-                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="index.php#team_section">Quem Somos</a>
-                 </li>
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.php#o_que_e">Conheça o Hyades</a>
+                  </li>
+               
               </ul>
               <div class="search_icon" id="sumir1"><a href="playlist.html"><img src="assets/images/playlist.png"><span class="padding_left_15">Playlists</span></a></div>
-              <div class="search_icon" id="sumir2"><a href="movies.html"><img src="assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
+              <div class="search_icon" id="sumir2"><a href="movies.php"><img src="assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
               
 
               <!-- barra de pesquisa start-->
-                 <form action="" name="form"  class="form">
-                    <input type="search" class="search-text" name="q" placeholder="Search..." >
+                 <form action="pesquisar.php" 
+                 method="POST" name="form"  class="form">
+                    <input type="search" class="search-text" name="pesq" placeholder="Pesquisar..." >
                     <a class="search-btn">
                        <img class = "loupe" src="assets/images/search-icon.png" alt="">
                     </a>
@@ -88,21 +96,16 @@
               <div class="card" style="border-radius: 15px;">
                 <div class="card-body text-center">
                   <div class="mt-3 mb-4">
-                  <h3 class="mb-2 heading-nome">Meu nome</h3>
+                  <h3 class="mb-2 heading">Meu nome</h3>
                   <p><?php echo $nome;?></p>
-                  <p class="mb-4 p-email">Meu e-mail</p> 
+                  <h3 class="mb-2 heading">Meu e-mail</h3> 
                   <p><?php echo $_SESSION['email'];?></p>
-                  <span class="text-muted mb-4 span-data-nasc">Minha data de nascimento</span> 
+                  <h3 class="mb-2 heading">Minha data de nascimento</h3> 
                   <p><?php echo date("d/m/Y",strtotime($nascimento));?></p>
                   <br>
-                  <h3 class="mb-2 my-4 heading-topicos">Meus tópicos de preferencia</h3>
+                  <h3 class="mb-2 heading">Meus tópicos de preferencia</h3>
                   <!-- os tópicos vão aparecer aqui, abaixo desse heading -->
-
-                  <span class="text-muted mb-4 span-data-criac">Entrei em xx/xx</span> 
-                  <br>
-                  <button type="button" class="btn btn-primary btn-rounded btn-sm my-4">
-                    Atualizar meus dados
-                  </button>
+                  <p><?php echo $topicos;?></p>
                   <br>
                   <a href="updSenha.html" id="logout">Redefinir minha senha</a>
                   <br>

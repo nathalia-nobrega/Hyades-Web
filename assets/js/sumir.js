@@ -11,8 +11,10 @@ pesquisar.addEventListener('click',function(){
 
     searchtext.style.width = '300px'
 
-    
-        sumir1.style.display = 'none'
+        if(sumir1 != null){
+            sumir1.style.display = 'none'
+        }
+       
         sumir2.style.display = 'none'
         sumir3.style.display = 'none'
         pesqtxt.style.display = 'none'
@@ -34,11 +36,14 @@ document.addEventListener("mouseup", function(event) {
        
         searchtext.style.width = '0'
 
-        sumir1.style.display = 'block'
-        sumir2.style.display = 'block'
-        sumir3.style.display = 'block'
+        if(sumir1 != null){
+            sumir1.style.display = 'inline-block'
+        }
+       
+        sumir2.style.display = 'inline-block'
+        sumir3.style.display = 'inline-block'
 
-        pesqtxt.style.display = 'block'
+        pesqtxt.style.display = 'inline-block'
         
         form.style.cssText = ''
             

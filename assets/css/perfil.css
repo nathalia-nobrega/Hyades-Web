@@ -2,22 +2,14 @@ body {
     background: #2B3B55;
 }
 
-.heading-nome {
+.heading {
     font-size: 1.7em;
+    font-weight: bold;
 }
 
-.p-email {
-    font-size: 1.2em;
-    color: rgb(121, 117, 112);
-    text-decoration: underline;
-}
-
-.span-data-nasc {
-    font-size: 1.2em;
-}
-
-.heading-topicos {
-    font-size: 1.7em;
+.span {
+    font-size: 1.5em;
+    font-weight: 500;
 }
 
 #logout:hover {

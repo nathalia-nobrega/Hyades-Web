@@ -52,12 +52,6 @@ session_start();
                 </div>
 
             <div class="sign_up">
-
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Lembre-se de mim.
-          </label>
-        </div>
         <button class="button" type="submit" id="entrar">Entrar</button>
         <p class="mt-5 mb-3 text-muted">© 2021–2022</p>
       </form>

@@ -1,3 +1,6 @@
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
@@ -28,33 +31,78 @@
       <!-- owl stylesheets --> 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+      <script defer src="assets/js/sumir.js"></script>
    </head>
    <body>
-      <!-- header section start -->
-      <div class="header_section">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="logo" href="index.php">
-               <img src="assets/images/HYADES.png">
-            </a>
+       <!-- header section start -->
+       <div class="header_section" id="header">
+         <nav class="navbar navbar-expand-xl navbar-light bg-light">
+            <a class="logo" href="index.php"><img src="assets/images/HYADES.png" class="img-fluid logo-hyades"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                     <a class="nav-link" href="index.php#o_que_e">Conheça o Hyades</a>
+                     <a class="nav-link" href="#o_que_e">Conheça o Hyades</a>
                   </li>
-
+                  <li class="nav-item">
+                    <a href="#sugestoes" class="nav-link">Sugestões</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#team_section">Quem Somos</a>
+                  </li>
                </ul>
                <!-- adicionar quando logado -->
+               <?php
+                  if(isset($_SESSION['email'])):
+               ?>
+               
+               <div class="search_icon" id="sumir1">
+                  <a href="playlist.html">
+                     <img src="assets/images/playlist.png">
+                     <span class="padding_left_15">Playlists</span>
+                  </a>
+               </div>
+                 
+               <?php
 
-               <!-- <div class="search_icon" id="sumir1"><a href="playlist.html"><img src="assets/images/playlist.png"><span class="padding_left_15">Playlists</span></a></div> -->
-               <div class="search_icon"><a href="Login.php"><img src="assets/images/user-icon.png" alt= "Fazer login"> <span class="padding_left_15">Login</span></a></div>
-               <div class="search_icon"><a href="#"><img src="assets/images/search-icon.png" alt= "Pesquisar"><span class="padding_left_15">Pesquisar</span></a></div>
+                  endif;
+               ?>
+               
+               <div class="search_icon" id="sumir2"><a href="movies.php"><img src="assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
+               <?php
+                  if(isset($_SESSION['email'])){
+               ?>
+               
+               <div class="search_icon" id="sumir3"><a href="perfil.php"><img src="assets/images/user-icon.png"><span class="padding_left_15">Meu Perfil</span></a></div>
+                 
+               <?php
+
+                  }else{    
+               
+               ?>
+               
+               
+            <div class="search_icon" id="sumir3"><a href="Login.php"><img src="assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
+            <?php
+                  }
+            ?>
+               <!-- barra de pesquisa start-->
+                  <form action="pesquisar.php" method="POST" name="form"  class="form">
+                     <input type="search" class="search-text" name="pesq" placeholder="Pesquisar..." >
+                     <a class="search-btn">
+                        <img class = "loupe" src="assets/images/search-icon.png" alt="">
+                     
+                  </form>
+               <!-- barra de pesquisa end -->
+
+                  <span class="search_icon" id="pesqtxt" class="padding_left_15" >Pesquisar</span></a>
             </div>
          </nav>
       </div>
       <!-- header section end -->
+      
       <!-- movies section start -->
       <div class="movies_section layout_padding">
          <div class="container">
@@ -75,7 +123,7 @@
                         <div class="iamge_movies_main">
                            <div class="iamge_movies">
                               <div class="image_3">
-                                 <a href="filmes/marighella.html" class="redirecionar-filme">
+                                 <a href="filmes/marighella.php" class="redirecionar-filme">
                                <img src="assets/images/filmes-poster/racismo/marighella.jpg" alt="Filme, Marighella, 2021" class="image" style="width:100%">
                               <div class="middle">
                            </div>
@@ -86,7 +134,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/selma.html" class="redirecionar-filme">
+                           <a href="filmes/selma.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/racismo/selma.jpg" alt="Filme, Selma: Uma Luta Pela Igualdade, 2014" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Selma: Uma Luta Pela Igualdade</h1>
@@ -95,7 +143,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/menino-23.html" class="redirecionar-filme">
+                           <a href="filmes/menino-23.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/racismo/menino-23.jpg" alt="Filme, Menino 23 – Infâncias Perdidas no Brasil, 2016" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Menino 23 – Infâncias Perdidas no Brasil</h1>
@@ -104,7 +152,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/13-emenda.html" class="redirecionar-filme">
+                           <a href="filmes/13-emenda.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/racismo/13-emenda.jpg" alt="Filme, A 13ª Emenda, 2016" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">A 13ª Emenda </h1>
@@ -113,7 +161,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/branco-sai.html" class="redirecionar-filme">
+                           <a href="filmes/branco-sai.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/racismo/branco-sai-preto-fica.jpg" alt="Filme, Branco Sai Preto Fica, 2014" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Branco Sai Preto Fica</h1>
@@ -134,7 +182,7 @@
                <div class="iamge_movies_main">
                   <div class="iamge_movies">
                    <div class="image_3">
-                     <a href="filmes/extraordinario.html" class="redirecionar-filme">
+                     <a href="filmes/extraordinario.php" class="redirecionar-filme">
                      <img src="assets/images/filmes-poster/bullying/extraordinario.jpg" alt="Filme, Extraórdinario, 2017"  class="image" alt="Wall-E,2008" style="width:100%">
                   </div>
                      <h1 class="code_text">Extraórdinario</h1>
@@ -143,7 +191,7 @@
                </div>
                <div class="iamge_movies">
                   <div class="image_3">
-                     <a href="filmes/vantagens-invisivel.html" class="redirecionar-filme">
+                     <a href="filmes/vantagens-invisivel.php" class="redirecionar-filme">
                         <img src="assets/images/filmes-poster/bullying/vantagens-de-ser-invisivel.jpg" alt="Filme, As Vantagens de Ser Invisível,2012" class="image" style="width:100%">
                         <h1 class="code_text">As Vantagens de Ser Invisível</h1>
                         <p class="there_text">2012, Estados Unidos </p>
@@ -152,7 +200,7 @@
             </div>
                <div class="iamge_movies">
                   <div class="image_3">
-                     <a href="filmes/sete-minutos.html" class="redirecionar-filme">
+                     <a href="filmes/sete-minutos.php" class="redirecionar-filme">
                      <img src="assets/images/filmes-poster/bullying/sete-minutos-depois-da-meia-noite.jpg"alt="Filme, Sete Minutos Depois da Meia-Noite, 2016"  class="image" style="width:100%">
                   </div>
                   
@@ -161,7 +209,7 @@
                   </a>
                </div>
                <div class="iamge_movies">
-                  <a href="filmes/no-ritmo-coracao.html" class="redirecionar-filme">
+                  <a href="filmes/no-ritmo-coracao.php" class="redirecionar-filme">
                   <div class="image_3">
                      <img src="assets/images/filmes-poster/bullying/no-ritmo-do-coracao.jpg" alt="Filme, No Ritmo do Coração, 2021" class="image" style="width:100%">
                   </div>
@@ -172,7 +220,7 @@
                </div>
                <div class="iamge_movies">
                   <div class="image_3">
-                     <a href="filmes/lily-chou.html" class="redirecionar-filme">
+                     <a href="filmes/lily-chou.php" class="redirecionar-filme">
                      <img src="assets/images/filmes-poster/bullying/tudo-sobre-lily.jpg" alt="Filme, Tudo sobre Lily Chou-Chou,2001" class="image" style="width:100%">
                   </div>
                      <h1 class="code_text">Tudo sobre Lily Chou-Chou</h1>
@@ -195,7 +243,7 @@
                          <div class="iamge_movies_main">
                            <div class="iamge_movies">
                               <div class="image_3">
-                                 <a href="filmes/walle.html" class="redirecionar-filme">
+                                 <a href="filmes/walle.php" class="redirecionar-filme">
                                  <img src="assets/images/filmes-poster/meio-ambiente/walle.jpg" alt="Filme, Wall-E,2008" class="image" style="width:100%">
                                </div>
                         <h1 class="code_text">Wall-E</h1>
@@ -204,7 +252,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/mononoke.html" class="redirecionar-filme">
+                           <a href="filmes/mononoke.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/meio-ambiente/princesa-mononoke.jpg" alt="Filme, Princesa Mononoke,1997" class="image" style="width:100%">
                         </div>
                         <h1 class="code_text">Princesa Mononoke</h1>
@@ -213,7 +261,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/home.html" class="redirecionar-filme">
+                           <a href="filmes/home.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/meio-ambiente/home.jpg" alt="Filme, Home - Nosso Planeta, Nossa Casa,2009" class="image" style="width:100%">
                         </div>
                         <h1 class="code_text">Home - Nosso Planeta, Nossa Casa</h1>
@@ -222,7 +270,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/perseguindo-o-gelo.html" class="redirecionar-filme">
+                           <a href="filmes/perseguindo-o-gelo.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/meio-ambiente/perseguindo-gelo.jpg" alt="Filme, Perseguindo o Gelo,2012" class="image" style="width:100%">
                         </div>
                         <h1 class="code_text">Perseguindo o Gelo</h1>
@@ -232,7 +280,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/Koyaanisqatsi.html" class="redirecionar-filme">
+                           <a href="filmes/Koyaanisqatsi.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/meio-ambiente/koyaanisqatsi.jpg" alt="Filme, Koyaanisqatsi,1992" class="image" style="width:100%">
                         </div>
                         <h1 class="code_text">Koyaanisqatsi</h1>
@@ -255,7 +303,7 @@
                      <div class="iamge_movies_main">
                         <div class="iamge_movies">
                            <div class="image_3">
-                              <a href="filmes/persepolis.html" class="redirecionar-filme">
+                              <a href="filmes/persepolis.php" class="redirecionar-filme">
                               <img src="assets/images/filmes-poster/mulheres/persepolis.jpg" alt="Filme, Persépolis,2007" class="image img-fluid" style="width:100%">
                         </div>
                         <h1 class="code_text">Persépolis</h1>
@@ -265,7 +313,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/preciosa.html" class="redirecionar-filme">
+                           <a href="filmes/preciosa.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/mulheres/preciosa.jpg" alt="Filme, Preciosa,2009" class="image" style="width:100%">
                         </div>
                         <h1 class="code_text">Preciosa</h1>
@@ -275,7 +323,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/adoraveis-mulheres.html" class="redirecionar-filme">
+                           <a href="filmes/adoraveis-mulheres.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/mulheres/adoraveis-mulheres.jpg" alt="Filme, Adoráveis Mulheres,2019" class="image" style="width:100%">
                         </div>
                         <h1 class="code_text">Adoráveis Mulheres</h1>
@@ -284,7 +332,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/nunca-raramente.html" class="redirecionar-filme">
+                           <a href="filmes/nunca-raramente.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/mulheres/nunca-raramente.jpg" alt="Filme, Nunca Raramente Às vezes Sempre, 2020" class="image" style="width:100%">
                         </div>
                         <h1 class="code_text">Nunca Raramente Às vezes Sempre</h1>
@@ -294,7 +342,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/que-horas-ela-volta.html" class="redirecionar-filme">
+                           <a href="filmes/que-horas-ela-volta.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/mulheres/que-horas-ela-volta.jpg" alt="Filme, Que horas ela volta?, 2015" class="image" style="width:100%">
                         </div>
                         <h1 class="code_text">Que horas ela volta?</h1>

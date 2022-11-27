@@ -66,7 +66,7 @@
                   endif;
                ?>
                
-               <div class="search_icon" id="sumir2"><a href="movies.html"><img src="assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
+               <div class="search_icon" id="sumir2"><a href="movies.php"><img src="assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
                <?php
                   if(isset($_SESSION['email'])){
                ?>
@@ -75,9 +75,8 @@
                  
                <?php
 
-                  }else{
-                      
-                  
+                  }else{    
+               
                ?>
                
                
@@ -171,7 +170,7 @@
                         <div class="iamge_movies_main">
                            <div class="iamge_movies">
                               <div class="image_3">
-                                 <a href="filmes/marighella.html" class="redirecionar-filme">
+                                 <a href="filmes/marighella.php" class="redirecionar-filme">
                                <img src="assets/images/filmes-poster/racismo/marighella.jpg" class="image" style="width:100%">
                               <div class="middle">
                            </div>
@@ -182,7 +181,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/selma.html" class="redirecionar-filme">
+                           <a href="filmes/selma.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/racismo/selma.jpg" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Selma: Uma Luta Pela Igualdade</h1>
@@ -191,7 +190,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/menino-23.html" class="redirecionar-filme">
+                           <a href="filmes/menino-23.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/racismo/menino-23.jpg" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Menino 23 – Infâncias Perdidas no Brasil</h1>
@@ -200,7 +199,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/13-emenda.html" class="redirecionar-filme">
+                           <a href="filmes/13-emenda.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/racismo/13-emenda.jpg" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">A 13ª Emenda </h1>
@@ -209,7 +208,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/branco-sai.html" class="redirecionar-filme">
+                           <a href="filmes/branco-sai.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/racismo/branco-sai-preto-fica.jpg" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Branco Sai Preto Fica</h1>
@@ -231,7 +230,7 @@
                      <div class="iamge_movies_main">
                         <div class="iamge_movies">
                          <div class="image_3">
-                           <a href="filmes/extraordinario.html" class="redirecionar-filme">
+                           <a href="filmes/extraordinario.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/bullying/extraordinario.jpg" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Extraórdinario</h1>
@@ -240,7 +239,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/vantagens-invisivel.html" class="redirecionar-filme">
+                           <a href="filmes/vantagens-invisivel.php" class="redirecionar-filme">
                               <img src="assets/images/filmes-poster/bullying/vantagens-de-ser-invisivel.jpg" class="image" style="width:100%">
                               <h1 class="code_text">As Vantagens de Ser Invisível</h1>
                               <p class="there_text">2012, Estados Unidos </p>
@@ -249,7 +248,7 @@
                   </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/sete-minutos.html" class="redirecionar-filme">
+                           <a href="filmes/sete-minutos.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/bullying/sete-minutos-depois-da-meia-noite.jpg" class="image" style="width:100%">
                         </div>
                         
@@ -258,7 +257,7 @@
                         </a>
                      </div>
                      <div class="iamge_movies">
-                        <a href="filmes/no-ritmo-coracao.html" class="redirecionar-filme">
+                        <a href="filmes/no-ritmo-coracao.php" class="redirecionar-filme">
                         <div class="image_3">
                            <img src="assets/images/filmes-poster/bullying/no-ritmo-do-coracao.jpg" class="image" style="width:100%">
                         </div>
@@ -269,7 +268,7 @@
                      </div>
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <a href="filmes/lily-chou.html" class="redirecionar-filme">
+                           <a href="filmes/lily-chou.php" class="redirecionar-filme">
                            <img src="assets/images/filmes-poster/bullying/tudo-sobre-lily.jpg" class="image" style="width:100%">
                         </div>
                            <h1 class="code_text">Tudo sobre Lily Chou-Chou</h1>
@@ -280,7 +279,7 @@
             </div>
          </div>
       </div>
-      <div class="seebt_1"><a href="movies.html">Mais filmes</a></div>
+      <div class="seebt_1"><a href="movies.php">Mais filmes</a></div>
       </div>
  </section>
       <!-- movies section end -->

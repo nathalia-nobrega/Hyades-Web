@@ -1,3 +1,6 @@
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
@@ -28,33 +31,74 @@
       <!-- owl stylesheets --> 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+      <script defer src="../assets/js/sumir.js"></script>
    </head>
    <body>
       
       
-      <!-- header section start -->
-      <div class="header_section">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="logo" href="../index.php"><img src="../assets/images/HYADES.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                     <a class="nav-link" href="../index.php#o_que_e">Conheça o Hyades</a>
-                  </li>
-               </ul>
-               <!-- adicionar quando logado -->
-
-               <!-- <div class="search_icon" id="sumir1"><a href="playlist.html"><img src="assets/images/playlist.png"><span class="padding_left_15">Playlists</span></a></div> -->
-               <div class="search_icon"><a href="../movies.html"><img src="../assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
-               <div class="search_icon"><a href="../Login.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
-               <div class="search_icon"><a href="#"><img src="../assets/images/search-icon.png"><span class="padding_left_15">Pesquisar</span></a></div>
+ <!-- header section start -->
+     <div class="header_section" id="header">
+      <nav class="navbar navbar-expand-xl navbar-light bg-light">
+         <a class="logo" href="../index.php"><img src="../assets/images/HYADES.png" class="img-fluid logo-hyades"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="../index.php#o_que_e">Conheça o Hyades</a>
+               </li>
+            </ul>
+            <!-- adicionar quando logado -->
+            <?php
+               if(isset($_SESSION['email'])):
+            ?>
+            
+            <div class="search_icon" id="sumir1">
+               <a href="../playlist.html">
+                  <img src="../assets/images/playlist.png">
+                  <span class="padding_left_15">Playlists</span>
+               </a>
             </div>
-         </nav>
-      </div>
-      <!-- header section end -->
+              
+            <?php
+
+               endif;
+            ?>
+            
+            <div class="search_icon" id="sumir2"><a href="../movies.php"><img src="../assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
+            <?php
+               if(isset($_SESSION['email'])){
+            ?>
+            
+            <div class="search_icon" id="sumir3"><a href="../perfil.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Meu Perfil</span></a></div>
+              
+            <?php
+
+               }else{    
+            
+            ?>
+            
+            
+         <div class="search_icon" id="sumir3"><a href="../Login.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
+         <?php
+               }
+         ?>
+            <!-- barra de pesquisa start-->
+               <form action="../pesquisar.php" method="POST" name="form"  class="form">
+                  <input type="search" class="search-text" name="pesq" placeholder="Pesquisar..." >
+                  <a class="search-btn">
+                     <img class = "loupe" src="../assets/images/search-icon.png" alt="ícone de pesquisar">
+                  
+               </form>
+            <!-- barra de pesquisa end -->
+
+               <span class="search_icon" id="pesqtxt" class="padding_left_15" >Pesquisar</span></a>
+         </div>
+      </nav>
+   </div>
+   <!-- header section end -->
       <!-- arrival section start -->
       <div class="arrival_section layout_padding">
          <div class="container-fluid">

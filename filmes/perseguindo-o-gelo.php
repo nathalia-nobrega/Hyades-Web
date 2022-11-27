@@ -1,3 +1,6 @@
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
@@ -9,7 +12,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Tudo Sobre Lily Chou-Chou</title>
+      <title>Perseguindo o Gelo</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -28,55 +31,97 @@
       <!-- owl stylesheets --> 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+      <script defer src="../assets/js/sumir.js"></script>
+
    </head>
    <body>
-      <!-- header section start -->
-      <div class="header_section">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="logo" href="../index.php"><img src="../assets/images/HYADES.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                     <a class="nav-link" href="../index.php#o_que_e">Conheça o Hyades</a>
-                  </li>
-               </ul>
-               <!-- adicionar quando logado -->
-
-               <!-- <div class="search_icon" id="sumir1"><a href="playlist.html"><img src="assets/images/playlist.png"><span class="padding_left_15">Playlists</span></a></div> -->
-               <div class="search_icon"><a href="../movies.html"><img src="../assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
-               <div class="search_icon"><a href="../Login.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
-               <div class="search_icon"><a href="#"><img src="../assets/images/search-icon.png"><span class="padding_left_15">Pesquisar</span></a></div>
+      
+ <!-- header section start -->
+     <div class="header_section" id="header">
+      <nav class="navbar navbar-expand-xl navbar-light bg-light">
+         <a class="logo" href="../index.php"><img src="../assets/images/HYADES.png" class="img-fluid logo-hyades"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="../index.php#o_que_e">Conheça o Hyades</a>
+               </li>
+            </ul>
+            <!-- adicionar quando logado -->
+            <?php
+               if(isset($_SESSION['email'])):
+            ?>
+            
+            <div class="search_icon" id="sumir1">
+               <a href="../playlist.html">
+                  <img src="../assets/images/playlist.png">
+                  <span class="padding_left_15">Playlists</span>
+               </a>
             </div>
-         </nav>
-      </div>
-      <!-- header section end -->
+              
+            <?php
+
+               endif;
+            ?>
+            
+            <div class="search_icon" id="sumir2"><a href="../movies.php"><img src="../assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
+            <?php
+               if(isset($_SESSION['email'])){
+            ?>
+            
+            <div class="search_icon" id="sumir3"><a href="../perfil.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Meu Perfil</span></a></div>
+              
+            <?php
+
+               }else{    
+            
+            ?>
+            
+            
+         <div class="search_icon" id="sumir3"><a href="../Login.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
+         <?php
+               }
+         ?>
+            <!-- barra de pesquisa start-->
+               <form action="../pesquisar.php" method="POST" name="form"  class="form">
+                  <input type="search" class="search-text" name="pesq" placeholder="Pesquisar..." >
+                  <a class="search-btn">
+                     <img class = "loupe" src="../assets/images/search-icon.png" alt="ícone de pesquisar">
+                  
+               </form>
+            <!-- barra de pesquisa end -->
+
+               <span class="search_icon" id="pesqtxt" class="padding_left_15" >Pesquisar</span></a>
+         </div>
+      </nav>
+   </div>
+   <!-- header section end -->
       <!-- arrival section start -->
       <div class="arrival_section layout_padding">
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-7 col-md-4">
-                  <iframe width="100%" height="480" src="https://www.youtube.com/embed/Kwlh-z2R8QE" title="All About Lily Chou-Chou (2001) | Trailer | Hayato Ichihara| Shûgo Oshinari | Ayumi Itô" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="100%" height="529" src="https://www.youtube.com/embed/HqknAn_3QpI" title="Chasing Ice Trailer (2012) - Sundance Film Festival Movie HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                </div>
                <div class="col-md-5 col-md-4">
-                  <h1 class="arrival_text">Tudo Sobre Lily Chou-Chou</h1>
+                  <h1 class="arrival_text">Perseguindo o Gelo</h1>
 
-                  <p class="long_text">6 de outubro de 2001</p>
+                  <p class="long_text">14 de dezembro de 2012</p>
                   
-                  <p class="long_text">A vida agitada dos estudantes adolescentes para quem a música sonhadora da cantora Lily Chou-Chou é a única maneira de escapar de uma sociedade alienante, violenta e insensível.</p>
+                  <p class="long_text">Com imagens aéreas de cinquenta e quatro países, 'Home' é uma representação de como os problemas da Terra estão todos interligados.</p>
                   <div>
                      <div class="w-auto px-2">
                         <div class="row">
                            <div class="col-md-6 col-sm-4">
                            <!-- #96861E -->
-                           <h2><img src="../assets/images/estrela-icon.png" alt="ícone de estrela" width="20" height="20"> Avaliação: 7.5 no IMDB</h2>
-                           <h2><img src="../assets/images/genero-icon.png" alt="ícone de lista" width="20" height="20"> Gênero: Drama, Policial</h2>
+                           <h2><img src="../assets/images/estrela-icon.png" alt="ícone de estrela" width="20" height="20"> Avaliação: 7.7 no IMDB</h2>
+                           <h2><img src="../assets/images/genero-icon.png" alt="ícone de lista" width="20" height="20"> Gênero: Documentário</h2>
                         </div>
                         <div class="col-md-6 col-sm-4">
-                           <h2><img src="../assets/images/duracao-icon.png" alt="ícone de relógio" width="20" height="20"> Duração: 2h26m</h2>
-                           <h2><img src="../assets/images/classificacao-icon.png" alt="ícone de classificação" width="24" height="24"> Classificação: N/A</h2>
+                           <h2><img src="../assets/images/duracao-icon.png" alt="ícone de relógio" width="20" height="20"> Duração: 1h15m</h2>
+                           <h2><img src="../assets/images/classificacao-icon.png" alt="ícone de classificação" width="24" height="24"> Classificação: 12</h2>
                            </div>
                         </div>
                            <div class="text-center align-items-center">
@@ -89,10 +134,9 @@
                               </div>
                                 
                            
+                        </div>
                      </div>
-               </div>
-            </div>
-
+                  </div>
                </div>
             </div>
          </div>

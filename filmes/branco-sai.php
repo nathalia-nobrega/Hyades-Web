@@ -1,3 +1,7 @@
+<?php
+   session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
@@ -9,7 +13,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>As Vantagens de Ser Invisível</title>
+      <title>Branco Sai Preto Fica</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -28,55 +32,97 @@
       <!-- owl stylesheets --> 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+      <script defer src="../assets/js/sumir.js"></script>
    </head>
    <body>
-      <!-- header section start -->
-      <div class="header_section">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="logo" href="../index.php"><img src="../assets/images/HYADES.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                     <a class="nav-link" href="../index.php#o_que_e">Conheça o Hyades</a>
-                  </li>
-               </ul>
-               <!-- adicionar quando logado -->
-
-               <!-- <div class="search_icon" id="sumir1"><a href="playlist.html"><img src="assets/images/playlist.png"><span class="padding_left_15">Playlists</span></a></div> -->
-               <div class="search_icon"><a href="../movies.html"><img src="../assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
-               <div class="search_icon"><a href="../Login.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
-               <div class="search_icon"><a href="#"><img src="../assets/images/search-icon.png"><span class="padding_left_15">Pesquisar</span></a></div>
+      
+ <!-- header section start -->
+     <div class="header_section" id="header">
+      <nav class="navbar navbar-expand-xl navbar-light bg-light">
+         <a class="logo" href="../index.php"><img src="../assets/images/HYADES.png" class="img-fluid logo-hyades"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="../index.php#o_que_e">Conheça o Hyades</a>
+               </li>
+            </ul>
+            <!-- adicionar quando logado -->
+            <?php
+               if(isset($_SESSION['email'])):
+            ?>
+            
+            <div class="search_icon" id="sumir1">
+               <a href="../playlist.html">
+                  <img src="../assets/images/playlist.png">
+                  <span class="padding_left_15">Playlists</span>
+               </a>
             </div>
-         </nav>
-      </div>
-      <!-- header section end -->
+              
+            <?php
+
+               endif;
+            ?>
+            
+            <div class="search_icon" id="sumir2"><a href="../movies.php"><img src="../assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
+            <?php
+               if(isset($_SESSION['email'])){
+            ?>
+            
+            <div class="search_icon" id="sumir3"><a href="../perfil.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Meu Perfil</span></a></div>
+              
+            <?php
+
+               }else{    
+            
+            ?>
+            
+            
+         <div class="search_icon" id="sumir3"><a href="../Login.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
+         <?php
+               }
+         ?>
+            <!-- barra de pesquisa start-->
+               <form action="../pesquisar.php" method="POST" name="form"  class="form">
+                  <input type="search" class="search-text" name="pesq" placeholder="Pesquisar..." >
+                  <a class="search-btn">
+                     <img class = "loupe" src="../assets/images/search-icon.png" alt="ícone de pesquisar">
+                  
+               </form>
+            <!-- barra de pesquisa end -->
+
+               <span class="search_icon" id="pesqtxt" class="padding_left_15" >Pesquisar</span></a>
+         </div>
+      </nav>
+   </div>
+   <!-- header section end -->
       <!-- arrival section start -->
       <div class="arrival_section layout_padding">
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-7 col-md-4">
-                  <iframe width="100%" height="480" src="https://www.youtube.com/embed/TsIYJDAscLE" title="As Vantagens de ser Invisível Trailer Legendado [HD]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="100%" height="711" src="https://www.youtube.com/embed/NJ_zeRJKUI4" title="Trailer Oficial - Branco Sai, Preto Fica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                </div>
                <div class="col-md-5 col-md-4">
-                  <h1 class="arrival_text">As Vantagens de Ser Invisível</h1>
+                  <h1 class="arrival_text">Branco Sai, Preto Fica</h1>
 
-                  <p class="long_text">19 de outubro de 2012</p>
+                  <p class="long_text">19 de março de 2015</p>
                   
-                  <p class="long_text">Um estudante introvertido faz amizade com dois estudantes estabelecidos que acolhem o mundo real.</p>
+                  <p class="long_text">Tiros em uma festa de música negra fora de Brasília feriram dois homens que ficam marcados para a vida. Um terceiro homem vem do futuro para investigar o que aconteceu e provar que tudo isso é culpa da sociedade.</p>
                   <div>
                      <div class="w-auto px-2">
                         <div class="row">
                            <div class="col-md-6 col-sm-4">
                            <!-- #96861E -->
-                           <h2><img src="../assets/images/estrela-icon.png" alt="ícone de estrela" width="20" height="20"> Avaliação: 8.0 no IMDB</h2>
-                           <h2><img src="../assets/images/genero-icon.png" alt="ícone de lista" width="20" height="20"> Gênero: Drama</h2>
+                           <h2><img src="../assets/images/estrela-icon.png" alt="ícone de estrela" width="20" height="20"> Avaliação: 6.3 no IMDB</h2>
+                           <h2><img src="../assets/images/genero-icon.png" alt="ícone de lista" width="20" height="20"> Gênero: Documentário</h2>
                         </div>
                         <div class="col-md-6 col-sm-4">
-                           <h2><img src="../assets/images/duracao-icon.png" alt="ícone de relógio" width="20" height="20"> Duração: 1h43m</h2>
-                           <h2><img src="../assets/images/classificacao-icon.png" alt="ícone de classificação" width="24" height="24"> Classificação: 14</h2>
+                           <h2><img src="../assets/images/duracao-icon.png" alt="ícone de relógio" width="20" height="20"> Duração: 1h30m</h2>
+                           <h2><img src="../assets/images/classificacao-icon.png" alt="ícone de classificação" width="24" height="24"> Classificação: 12</h2>
                            </div>
                         </div>
                            <div class="text-center align-items-center">
@@ -98,7 +144,7 @@
          </div>
       </div>
       <!-- arrival section end -->
-       <!-- footer  section start -->
+        <!-- footer  section start -->
       <footer class="footer arrival_section">
          <div class="container">
             <div class="row justify-content-center">

@@ -11,8 +11,6 @@ strtoupper($pesquisa);
     $sql = "SELECT * FROM filme WHERE titulo LIKE '%$pesquisa%' OR pais_origem LIKE '%$pesquisa%' ";
     $result = $conn->query($sql) or die("Falha na execução do código sql: ");
 
-    
-
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +77,7 @@ strtoupper($pesquisa);
                   endif;
                ?>
                
-               <div class="search_icon" id="sumir2"><a href="movies.html"><img src="assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
+               <div class="search_icon" id="sumir2"><a href="movies.php"><img src="assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
                <?php
                   if(isset($_SESSION['email'])){
                ?>
@@ -102,8 +100,7 @@ strtoupper($pesquisa);
                   <form action="pesquisar.php" method="POST" name="form"  class="form">
                      <input type="search" class="search-text" name="pesq" placeholder="Pesquisar..." >
                      <a class="search-btn">
-                        <img class = "loupe" src="assets/images/search-icon.png" alt="">
-                     
+                        <img class = "loupe" src="assets/images/search-icon.png" alt="ícone de pesquisar">
                   </form>
                <!-- barra de pesquisa end -->
 

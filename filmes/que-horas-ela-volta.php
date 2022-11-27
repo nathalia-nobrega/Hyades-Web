@@ -1,3 +1,6 @@
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
@@ -9,7 +12,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Wall-E</title>
+      <title>Nunca, Raramente, Às Vezes, Sempre</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -28,55 +31,96 @@
       <!-- owl stylesheets --> 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+      <script defer src="../assets/js/sumir.js"></script>
    </head>
    <body>
-      <!-- header section start -->
-      <div class="header_section">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="logo" href="../index.php"><img src="../assets/images/HYADES.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                     <a class="nav-link" href="../index.php#o_que_e">Conheça o Hyades</a>
-                  </li>
-               </ul>
-               <!-- adicionar quando logado -->
-
-               <!-- <div class="search_icon" id="sumir1"><a href="playlist.html"><img src="assets/images/playlist.png"><span class="padding_left_15">Playlists</span></a></div> -->
-               <div class="search_icon"><a href="../movies.html"><img src="../assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
-               <div class="search_icon"><a href="../Login.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
-               <div class="search_icon"><a href="#"><img src="../assets/images/search-icon.png"><span class="padding_left_15">Pesquisar</span></a></div>
+      
+ <!-- header section start -->
+     <div class="header_section" id="header">
+      <nav class="navbar navbar-expand-xl navbar-light bg-light">
+         <a class="logo" href="../index.php"><img src="../assets/images/HYADES.png" class="img-fluid logo-hyades"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="../index.php#o_que_e">Conheça o Hyades</a>
+               </li>
+            </ul>
+            <!-- adicionar quando logado -->
+            <?php
+               if(isset($_SESSION['email'])):
+            ?>
+            
+            <div class="search_icon" id="sumir1">
+               <a href="../playlist.html">
+                  <img src="../assets/images/playlist.png">
+                  <span class="padding_left_15">Playlists</span>
+               </a>
             </div>
-         </nav>
-      </div>
-      <!-- header section end -->
+              
+            <?php
+
+               endif;
+            ?>
+            
+            <div class="search_icon" id="sumir2"><a href="../movies.php"><img src="../assets/images/navbar-explore.png"><span class="padding_left_15">Explorar</span></a></div>
+            <?php
+               if(isset($_SESSION['email'])){
+            ?>
+            
+            <div class="search_icon" id="sumir3"><a href="../perfil.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Meu Perfil</span></a></div>
+              
+            <?php
+
+               }else{    
+            
+            ?>
+            
+            
+         <div class="search_icon" id="sumir3"><a href="../Login.php"><img src="../assets/images/user-icon.png"><span class="padding_left_15">Login</span></a></div>
+         <?php
+               }
+         ?>
+            <!-- barra de pesquisa start-->
+               <form action="../pesquisar.php" method="POST" name="form"  class="form">
+                  <input type="search" class="search-text" name="pesq" placeholder="Pesquisar..." >
+                  <a class="search-btn">
+                     <img class = "loupe" src="../assets/images/search-icon.png" alt="ícone de pesquisar">
+                  
+               </form>
+            <!-- barra de pesquisa end -->
+
+               <span class="search_icon" id="pesqtxt" class="padding_left_15" >Pesquisar</span></a>
+         </div>
+      </nav>
+   </div>
+   <!-- header section end -->
       <!-- arrival section start -->
       <div class="arrival_section layout_padding">
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-7 col-md-4">
-                  <iframe width="100%" height="480" src="https://www.youtube.com/embed/CZ1CATNbXg0" title="WALL-E (2008) Trailer #1 | Movieclips Classic Trailers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="100%" height="529" src="https://www.youtube.com/embed/xf_3-CKwL64" title="Que Horas Ela Volta? (2015) | Filme completo com Regina Casé" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                </div>
                <div class="col-md-5 col-md-4">
-                  <h1 class="arrival_text">Wall-E</h1>
+                  <h1 class="arrival_text">Que Horas Ela Volta?</h1>
 
-                  <p class="long_text">27 de junho de 2008</p>
+                  <p class="long_text">27 de agosto de 2015</p>
                   
-                  <p class="long_text">Num futuro distante, um pequeno robô faz uma viagem que decidirá o destino da humanidade.</p>
+                  <p class="long_text">A pernambucana Val (Regina Casé) se mudou para São Paulo a fim de dar melhores condições de vida para sua filha Jéssica. Com muito receio, ela deixou a menina no interior de Pernambuco para ser babá de Fabinho, morando integralmente na casa de seus patrões. Treze anos depois, quando o menino (Michel Joelsas) vai prestar vestibular, Jéssica (Camila Márdila) lhe telefona, pedindo ajuda para ir à São Paulo, no intuito de prestar a mesma prova. Os chefes de Val recebem a menina de braços abertos, só que quando ela deixa de seguir certo protocolo, circulando livremente, como não deveria, a situação se complica.</p>
                   <div>
                      <div class="w-auto px-2">
                         <div class="row">
                            <div class="col-md-6 col-sm-4">
                            <!-- #96861E -->
-                           <h2><img src="../assets/images/estrela-icon.png" alt="ícone de estrela" width="20" height="20"> Avaliação: 8.4 no IMDB</h2>
-                           <h2><img src="../assets/images/genero-icon.png" alt="ícone de lista" width="20" height="20"> Gênero: Animação, Aventura</h2>
+                           <h2><img src="../assets/images/estrela-icon.png" alt="ícone de estrela" width="20" height="20"> Avaliação: 7.7 no IMDB</h2>
+                           <h2><img src="../assets/images/genero-icon.png" alt="ícone de lista" width="20" height="20"> Gênero: Drama, Comédia</h2>
                         </div>
                         <div class="col-md-6 col-sm-4">
-                           <h2><img src="../assets/images/duracao-icon.png" alt="ícone de relógio" width="20" height="20"> Duração: 1h38m</h2>
-                           <h2><img src="../assets/images/classificacao-icon.png" alt="ícone de classificação" width="24" height="24"> Classificação: N/A</h2>
+                           <h2><img src="../assets/images/duracao-icon.png" alt="ícone de relógio" width="20" height="20"> Duração: 1h52m</h2>
+                           <h2><img src="../assets/images/classificacao-icon.png" alt="ícone de classificação" width="24" height="24"> Classificação: 12</h2>
                            </div>
                         </div>
                            <div class="text-center align-items-center">
@@ -87,12 +131,9 @@
                                     <h3 class="font-weight-bold px-3">Favoritar</h3>
                                  </div>
                               </div>
-                                
-                           
+                        </div>
                      </div>
-               </div>
-            </div>
-
+                  </div>
                </div>
             </div>
          </div>
@@ -112,18 +153,18 @@
                      <a href="../lgpd.html">LGPD</a>
                   </p>
                   <div class="social-icons">
-                        <a href="https://github.com/nathalia-nobrega/Hyades-Web" data-toggle="tooltip" data-placement="top" title="github" target="_blank">
-                           <img src="../assets/images/github-social.png" alt="GitHub">
-                        </a>
+                     <a href="https://github.com/nathalia-nobrega/Hyades-Web" data-toggle="tooltip" data-placement="top" title="github" target="_blank">
+                        <img src="../assets/images/github-social.png" alt="GitHub">
+                     </a>
 
-                        <a href="https://twitter.com/VHSBLOND" data-toggle="tooltip" data-placement="top" title="Twitter">
-                          <img src="../assets/images/twitter-social.png" alt="twitter">
-                        </a>
+                     <a href="https://twitter.com/VHSBLOND" data-toggle="tooltip" data-placement="top" title="Twitter">
+                       <img src="../assets/images/twitter-social.png" alt="twitter">
+                     </a>
 
-                        <a href="https://instagram.com/dunordgr" data-toggle="tooltip" data-placement="top" title="Instagram">
-                           <img src="../assets/images/instagram-social.png" alt="instagram">
-                        </a>
-                     </div>
+                     <a href="https://instagram.com/dunordgr" data-toggle="tooltip" data-placement="top" title="Instagram">
+                        <img src="../assets/images/instagram-social.png" alt="instagram">
+                     </a>
+                  </div>
                </div>
             </div>
 
